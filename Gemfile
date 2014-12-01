@@ -19,6 +19,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'spree', '2.4.1'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
+gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '2-4-stable'
 
 #ANALYTICS
 gem 'coveralls', require: false
