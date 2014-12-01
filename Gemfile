@@ -20,6 +20,9 @@ gem 'spree', '2.4.1'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 
+#ANALYTICS
+gem 'coveralls', require: false
+
 group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
