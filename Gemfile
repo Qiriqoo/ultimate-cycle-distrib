@@ -3,11 +3,11 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 gem 'pg'
 gem 'unicorn'
+gem 'rails_12factor', group: :production
 
 #JS
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'therubyracer',  platforms: :ruby, group: :production
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
@@ -30,3 +30,5 @@ group :development, :test do
   gem 'bullet'
   gem 'better_errors'
 end
+
+ruby '2.0.0'
