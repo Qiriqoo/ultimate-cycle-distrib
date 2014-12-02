@@ -24,6 +24,9 @@ gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '2-4-stable'
 gem 'newrelic_rpm'
 gem 'coveralls', require: false
 
+#CACHE
+gem 'dalli'
+
 group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'

@@ -9,6 +9,9 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+  config.currency = 'EUR'
+  config.default_country_id = 1
+  config.site_name = 'Ultimate Cycle Distribution'
 end
 
 Spree.user_class = "Spree::User"
