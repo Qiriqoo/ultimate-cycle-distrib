@@ -11,7 +11,6 @@ Spree.config do |config|
   # config.track_inventory_levels = false
   config.currency = 'EUR'
   config.default_country_id = 1
-  config.site_name = 'Ultimate Cycle Distribution'
 end
 
 Spree.user_class = "Spree::User"
