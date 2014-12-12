@@ -11,7 +11,7 @@ module UltimateCycle
     
     config.to_prepare do
 
-      ["../app/**/*_decorator*.rb", "../app/overrides/*.rb"].each do |path|
+      ["../app/**/*_extension.rb"].each do |path|
         Dir.glob(File.join(File.dirname(__FILE__), path)){ |c| Rails.configuration.cache_classes ? require(c) : load(c) }
       end
     end
