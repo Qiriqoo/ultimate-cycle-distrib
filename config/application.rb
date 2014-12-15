@@ -27,5 +27,10 @@ module UltimateCycle
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :fr
+
+
+    config.after_initialize do
+      config.spree.promotions.rules = [Spree::Promotion::Rules::ItemTotal, Spree::Promotion::Rules::Product, Spree::Promotion::Rules::User]
+    end
   end
 end

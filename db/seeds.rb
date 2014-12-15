@@ -1,7 +1,7 @@
 # Set Up Store Configuration
 Spree::Store.new do |s|
   s.code              = 'UCD'
-  s.name              = 'Ultimate Cycle'
+  s.name              = 'Ultimate Cycle Distribution'
   s.url               = 'ultimate-cycle-distribution.fr'
   s.mail_from_address = 'support@ultimate-cycle-distribution.fr'
   s.default_currency = 'EUR'
