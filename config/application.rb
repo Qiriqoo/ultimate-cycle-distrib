@@ -8,11 +8,11 @@ Bundler.require(*Rails.groups)
 
 module UltimateCycle
   class Application < Rails::Application
-    
+
     config.to_prepare do
 
-      ["../app/**/*_extension.rb"].each do |path|
-        Dir.glob(File.join(File.dirname(__FILE__), path)){ |c| Rails.configuration.cache_classes ? require(c) : load(c) }
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_extension.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
       end
     end
 
