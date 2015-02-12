@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 
 #CSS
 gem 'sass-rails', '~> 4.0.3'
+gem 'haml-rails', '~> 0.8'
 
 #SPREE
 gem 'spree', '2.4.1'
@@ -32,6 +33,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'bullet'
   gem 'better_errors'
+  gem 'factory_girl_rails'
+  gem 'faker', '1.3.0'
 end
 
 ruby '2.2.0'
