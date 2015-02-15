@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   mount Spree::Core::Engine, :at => '/'
 
   Spree::Core::Engine.routes.draw do
+
+    resources :newsletters, only: :create
+
     namespace :admin do
       resources :newsletters, only: [:index, :create, :destroy]
     end
