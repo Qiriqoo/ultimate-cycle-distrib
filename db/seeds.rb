@@ -9,7 +9,7 @@ Spree::Store.new do |s|
 end.save!
 
 # Create Roles
-['admin', 'subadmin', 'enterprise'].each do |role|
+['admin', 'subadmin'].each do |role|
   Spree::Role.where(name: role).first_or_create
 end
 
