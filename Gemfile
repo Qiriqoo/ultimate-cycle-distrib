@@ -34,6 +34,7 @@ group :development, :test do
   gem 'bullet'
   gem 'better_errors'
   gem 'factory_girl_rails'
+  gem 'ffaker'
 end
 
 ruby '2.2.0'
