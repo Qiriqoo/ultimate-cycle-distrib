@@ -16,7 +16,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'haml-rails', '~> 0.8'
 
 #SPREE
-gem 'spree'
+gem 'spree', github: 'spree/spree', branch: '2-4-stable'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '2-4-stable'

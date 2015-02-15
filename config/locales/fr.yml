@@ -1,0 +1,10 @@
+fr:
+  spree:
+    email: Email
+    actions:
+      add: Ajouter
+      subscribe: S'abonner
+    newsletter:
+      list_users: Liste des abonnés à la newsletter
+      added: 'Email ajouté avec succés'
+      deleted: 'Email supprimé avec succés'
