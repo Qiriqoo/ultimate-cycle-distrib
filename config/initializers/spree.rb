@@ -32,3 +32,5 @@ rails_config.promotions.actions = [Spree::Promotion::Actions::CreateAdjustment]
 rails_config.calculators.promotion_actions_create_item_adjustments = [Spree::Calculator::FlatRate]
 rails_config.calculators.promotion_actions_create_adjustments = [Spree::Calculator::FlatRate]
 rails_config.calculators.shipping_methods = [Spree::Calculator::Shipping::FlatRate]
+
+Spree::PermittedAttributes.user_attributes.push(:active)
