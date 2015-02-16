@@ -1,6 +1,10 @@
 fr:
   spree:
     email: Email
+    admin: Administrateur
+    enterprise: Entreprise
+    active: Actif
+    inactive: Inactif
     actions:
       add: Ajouter
       subscribe: S'abonner
