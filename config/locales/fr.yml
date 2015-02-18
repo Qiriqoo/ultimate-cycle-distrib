@@ -1,10 +1,34 @@
 fr:
+  views:
+    pagination:
+      previous: Précédent
+      first: Première page
+      next: Suivant
+      last: Dernière page
   spree:
     email: Email
-    admin: Administrateur
+    administrator: Administrateur
     enterprise: Entreprise
     active: Actif
     inactive: Inactif
+    no_resource_found: Aucune ressource
+    new_promotion_category: Nouvelle catégorie de promotion
+    lifetime_stats: Statistiques
+    total_sales: Achats total
+    num_orders: Nb total de commandes
+    average_order_value: Panier moyen
+    member_since: Membre depuis
+    create_new_order: Créer une nouvelle commande
+    admin:
+      tab:
+        products: produits
+        users: utilisateurs
+      user:
+        user_information: Informations utilisateurs
+        account: Compte
+        addresses: Adresses
+        orders: Commandes
+        items: Produits
     actions:
       add: Ajouter
       subscribe: S'abonner
