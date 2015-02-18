@@ -14,10 +14,8 @@
     <% @newsletters.each do |newsletter|%>
       <tr id="<%= spree_dom_id newsletter %>" data-hook="admin_users_index_rows" class="<%= cycle('odd', 'even')%>">
         <td class='user_email'><%= newsletter.email %></td>
-        <td class='align-center'>
-          <%= link_to admin_newsletter_path(newsletter), method: :delete, title: Spree.t('actions.destroy') do %>
-            <span class='fa fa-trash'></span>
-          <% end %>
+        <td class='actions'>
+          <%= link_to_delete newsletter, :no_text => true %>
         </td>
       </tr>
     <% end %>
