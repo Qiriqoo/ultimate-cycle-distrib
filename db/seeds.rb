@@ -13,6 +13,9 @@ end.save!
   Spree::Role.where(name: role).first_or_create
 end
 
+Spree::Page.create!(name: 'Conditions Générales de Ventes', slug: 'conditions-generales-de-ventes')
+Spree::Page.create!(name: 'Mentions légales', slug: 'mentions-legales')
+
 # Create France country
 france = Spree::Country.create!(name: "France", iso3: "FRA", iso: "FR", iso_name: "FRANCE", numcode: "250")
 

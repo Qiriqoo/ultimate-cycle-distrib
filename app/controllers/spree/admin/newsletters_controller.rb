@@ -1,6 +1,6 @@
 module Spree
   module Admin
-    class NewslettersController <  Spree::Admin::ResourceController
+    class NewslettersController < Spree::Admin::ResourceController
 
       def index
         @search = Newsletter.search(params[:q])

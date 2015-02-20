@@ -14,6 +14,7 @@ Spree.config do |config|
   config.currency_decimal_mark = ','
   config.currency_thousands_separator = ''
   config.currency_symbol_position = 'after'
+  config.allow_ssl_in_development_and_test = false
 
 end
 

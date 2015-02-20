@@ -19,10 +19,13 @@ fr:
     average_order_value: Panier moyen
     member_since: Membre depuis
     create_new_order: Créer une nouvelle commande
+    read: Lu
+    unread: Non lu
     admin:
       tab:
         products: produits
         users: utilisateurs
+        configuration: config
       user:
         user_information: Informations utilisateurs
         account: Compte
@@ -36,3 +39,11 @@ fr:
       list_users: Liste des abonnés à la newsletter
       added: 'Email ajouté avec succés'
       deleted: 'Email supprimé avec succés'
+    pages:
+      conditions_generales_de_ventes: Conditions Générales de Ventes
+      mentions_legales: Mentions legales
+      contacts: Contacts
+      contact:
+        contact: Contact
+        return_list_contacts: Retour à la liste des contacts
+        added: Votre message à bien été enregistré
