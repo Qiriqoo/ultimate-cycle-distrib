@@ -15,7 +15,7 @@
       <tr id="<%= spree_dom_id contact %>" data-hook="admin_contacts_index_rows" class="<%= cycle('odd', 'even')%>">
         <td class='contact_email'><%= contact.email %></td>
         <td class='contact_subject'>
-          <%= link_to contact.subject, admin_contact_path(contact.id) %>
+          <%= link_to contact.subject, contact_admin_pages_path(contact.id) %>
           <% if !contact.read %>
             <span class='pull-right'> <%= Spree.t(:unread) %> </span>
           <% end %>
@@ -35,7 +35,7 @@
   <% end %>
 
   <div class="box align-center" data-hook="admin_users_index_search">
-    <%= search_form_for [:admin, @search], url: admin_contacts_url do |f| %>
+    <%= search_form_for [:admin, @search], url: contacts_admin_pages_url do |f| %>
       <div class="field">
         <%= f.label :email, Spree.t(:email) %> <br>
         <%= f.text_field :email, :class => 'fullwidth' %>

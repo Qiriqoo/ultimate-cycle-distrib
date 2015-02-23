@@ -11,11 +11,16 @@ Rails.application.routes.draw do
 
     resources :newsletters, only: :create
     resources :contacts, only: [:new, :create]
+    resources :pages, only: [:show]
 
     namespace :admin do
       resources :newsletters, only: [:index, :create, :destroy]
-      resources :pages, only: [:index, :show]
-      resources :contacts, only: [:index, :show]
+      resources :pages, only: [:index, :show, :update] do
+        collection do
+          get 'contacts' => 'contacts#index'
+          get 'contacts/:id' => 'contacts#show', as: 'contact'
+        end
+      end
     end
   end
           # The priority is based upon order of creation: first created -> highest priority.

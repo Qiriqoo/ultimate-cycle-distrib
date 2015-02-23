@@ -14,7 +14,7 @@ module Spree
 
       def show
         @contact = Contact.find(params[:id])
-        @contact.update_attributes!(read: true)
+        @contact.update_attributes!(read: true) unless @contact.read
       end
     end
   end

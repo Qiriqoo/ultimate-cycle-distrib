@@ -20,6 +20,7 @@ gem 'spree', github: 'spree/spree', branch: '2-4-stable'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '2-4-stable'
+gem 'spree_editor', github: 'spree/spree_editor', branch: '2-4-stable'
 
 #ANALYTICS
 gem 'newrelic_rpm'
