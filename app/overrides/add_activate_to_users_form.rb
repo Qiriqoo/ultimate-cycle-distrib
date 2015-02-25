@@ -6,13 +6,13 @@ Deface::Override.new(:virtual_path => "spree/admin/users/index",
 Deface::Override.new(:virtual_path => "spree/admin/users/_form",
                      :name => "add_activate_button_to_users_index2",
                      :insert_after => "[data-hook='admin_user_form_roles']",
-                     :text => "<div data-hook='admin_user_form_actif' class='field'>
-                                <%= label_tag nil, 'Activation' %>
-                                <ul>
-                                  <li>
+                     :text => "<div data-hook='admin_user_form_actif' class='form-group'>
+                                <strong> Activation </strong>
+                                <div class='checkbox form-inline'>
+                                  <%= label_tag 'active', 'active' do %>
                                     <%= check_box 'user' , 'active', {}, 'true', 'false' %>
-                                    <%= label_tag 'active', 'active' %>
-                                  </li>
-                                </ul>
+                                    active
+                                  <% end %>
+                                </div>
                               </div>")
 

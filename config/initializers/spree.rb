@@ -11,9 +11,7 @@ Spree.config do |config|
   # config.track_inventory_levels = false
   config.currency = 'EUR'
   config.default_country_id = 1
-  config.currency_decimal_mark = ','
-  config.currency_thousands_separator = ''
-  config.currency_symbol_position = 'after'
+
 
 end
 

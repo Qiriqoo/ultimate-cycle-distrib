@@ -5,6 +5,7 @@ fr:
     enterprise: Entreprise
     active: Actif
     inactive: Inactif
+    quick_search: Recherche rapide
     actions:
       add: Ajouter
       subscribe: S'abonner
