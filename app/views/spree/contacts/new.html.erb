@@ -1,18 +1,19 @@
 <h1>Laissez-nous un message</h1>
-
+<br>
+<br>
 <%= form_for @contact do |f| %>
   <%= f.field_container :subject do %>
-    <%= f.label :subject, Spree.t(:subject) %><br />
-    <%= f.text_field :subject, :class => 'fullwidth' %>
+    <%= f.text_field :subject, class: 'fullwidth', placeholder: Spree.t('pages.contact.subject_placeholder') %>
   <% end %>
+  <br>
   <%= f.field_container :email do %>
-    <%= f.label :email, Spree.t(:email) %><br />
-    <%= f.text_field :email, :class => 'fullwidth' %>
+    <%= f.text_field :email, class: 'fullwidth', placeholder: Spree.t('pages.contact.email_placeholder') %>
   <% end %>
-      <%= f.field_container :content do %>
-    <%= f.label :content, Spree.t(:content) %><br />
-    <%= f.text_area :content, :class => 'fullwidth' %>
+  <br>
+  <%= f.field_container :content do %>
+    <%= f.text_area :content, class: 'fullwidth', cols: 50, rows: 10, placeholder: Spree.t('pages.contact.content_placeholder') %>
   <% end %>
+  <br>
   <div class="form-buttons filter-actions actions" data-hook="buttons">
     <%= button Spree.t('actions.send'), 'ok' %>
   </div>

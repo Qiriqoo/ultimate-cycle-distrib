@@ -13,7 +13,7 @@
     <%= link_to Spree.t('pages.contact.contact') , new_contact_path %>
     <br>
     <% Spree::Page.order('created_at DESC').each do |page| %>
-      <%= link_to page.name, page_path(page.slug) %>
+      <%= link_to Spree.t("pages.#{page.name.parameterize.underscore}"), page_path(page.slug) %>
       <br>
     <% end %>
   </div>

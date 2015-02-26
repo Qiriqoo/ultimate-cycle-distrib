@@ -35,16 +35,20 @@ fr:
     actions:
       add: Ajouter
       subscribe: S'abonner
+      send: Envoyer
     newsletter:
       list_users: Liste des abonnés à la newsletter
       added: Email ajouté avec succés
       deleted: Email supprimé avec succés
     pages:
       conditions_generales_de_ventes: Conditions Générales de Ventes
-      mentions_legales: Mentions legales
+      mentions_legales: Mentions légales
       contacts: Contacts
       updated: Page mise à jour avec succés
       contact:
+        subject_placeholder: Le sujet de votre message
+        email_placeholder: Votre email
+        content_placeholder: Votre message
         contact: Contact
         return_list_contacts: Retour à la liste des contacts
         added: Votre message à bien été enregistré

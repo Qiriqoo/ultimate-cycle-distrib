@@ -1,7 +1,7 @@
 <%= render :partial => 'spree/admin/shared/page_sub_menu' %>
 
 <% content_for :page_title do %>
-  <%= @page.name %>
+  <%= Spree.t("pages.#{@page.name.parameterize.underscore}") %>
 <% end %>
 
 <%= form_for [:admin, @page] do |f| %>

@@ -3,7 +3,7 @@ class CreatePages < ActiveRecord::Migration
     create_table :spree_pages do |t|
       t.string :name
       t.string :slug
-      t.text :content
+      t.text :content, default: ''
       t.timestamps
     end
   end

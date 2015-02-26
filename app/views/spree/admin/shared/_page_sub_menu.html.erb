@@ -1,7 +1,7 @@
 <% content_for :sub_menu do %>
   <ul id="sub_nav" data-hook="admin_user_sub_tabs" class="inline-menu">
-    <%= tab :conditions_generales_de_ventes, :url => admin_page_path(1), :match_path => '/pages/1' %>
-    <%= tab :mentions_legales, :url => admin_page_path(2), :match_path => '/pages/2' %>
+    <%= tab :conditions_generales_de_ventes, :url => admin_page_path(Spree::Page.find_by(slug: 'conditions-generales-de-ventes')), :match_path => "/pages/#{Spree::Page.find_by(slug: 'conditions-generales-de-ventes').id}" %>
+    <%= tab :mentions_legales, :url => admin_page_path(Spree::Page.find_by(slug: 'mentions-legales')), :match_path => "/pages/#{Spree::Page.find_by(slug: 'mentions-legales').id}" %>
     <%= tab :contacts, :url => contacts_admin_pages_path, :match_path => '/pages/contacts' %>
   </ul>
 <% end %>

@@ -1,4 +1,4 @@
-<h1><%= @page.name %></h1>
+<h1><%= Spree.t("pages.#{@page.name.parameterize.underscore}") %></h1>
 <br>
 <br>
 
