@@ -1,11 +1,15 @@
 require 'rails_helper'
 
-describe Spree::StockItem, :focus do
+describe Spree::StockItem do
 
   context 'when count on hand change' do
 
     let(:stock_location) { FactoryGirl.create(:stock_location_with_items) }
     subject { stock_location.stock_items.order(:id).first }
+
+    before(:all) do
+      FactoryGirl.create(:admin_user)
+    end
 
     before(:each) do
       subject.variant.name = 'Test'
