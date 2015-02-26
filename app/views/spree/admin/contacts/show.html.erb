@@ -1,0 +1,18 @@
+<%= render :partial => 'spree/admin/shared/page_sub_menu' %>
+
+<% content_for :page_title do %>
+  <%= Spree.t('pages.contacts') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to Spree.t('pages.contact.return_list_contacts'), contacts_admin_pages_url, :icon => 'arrow-left' %>
+  </li>
+<% end %>
+
+
+<h2><%= @contact.subject %></h2>
+<br>
+<h6><%= @contact.email %></h6>
+<br>
+<p><%= @contact.content %></p>

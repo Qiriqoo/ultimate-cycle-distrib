@@ -1,5 +1,5 @@
 module Spree
-  class NewslettersController <  Spree::Admin::ResourceController
+  class NewslettersController < Spree::StoreController
 
     def create
       newsletter = Newsletter.new(newsletter_params)
