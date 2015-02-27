@@ -1,0 +1,79 @@
+<%= render :partial => 'spree/admin/shared/page_sub_menu' %>
+
+<% content_for :page_title do %>
+  <%= Spree.t('pages.partners_providers') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to Spree.t('pages.partner.add_partner'), new_admin_partner_path, :icon => 'plus' %>
+  </li>
+<% end %>
+
+
+<h2><%= Spree.t('pages.partners') %></h2>
+<br>
+<br>
+
+<% if @partners.partner.empty? %>
+  <div class="alpha sixteen columns no-objects-found">
+    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/partner')) %>,
+    <%= link_to Spree.t(:add_one), new_admin_partner_path(status: 0) %>!
+  </div>
+<% else %>
+  <table class="index" id="listing_partners" data-hook>
+    <colgroup>
+      <col style="width: 30%">
+      <col style="width: 55%">
+      <col style="width: 15%">
+    </colgroup>
+    <tbody>
+      <% @partners.partner.each do |partner|%>
+        <tr id="<%= spree_dom_id partner %>" data-hook="admin_partners_index_rows" class="<%= cycle('odd', 'even')%>">
+          <td class='partner_logo align-center'><%= image_tag partner.logo.url(:medium) %></td>
+          <td class='partner_name'>
+            <%= link_to partner.name, edit_admin_partner_path(partner.id) %>
+          </td>
+          <td class='actions'>
+            <%= link_to_edit partner, :no_text => true %>
+            <%= link_to '', admin_partner_path(partner.id), class: 'fa fa-trash icon_link with-tip no-text', method: :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<h2><%= Spree.t('pages.providers') %></h2>
+<br>
+<br>
+<% if @partners.provider.empty? %>
+  <div class="alpha sixteen columns no-objects-found">
+    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/partner')) %>,
+    <%= link_to Spree.t(:add_one), new_admin_partner_path(status: 1) %>!
+  </div>
+<% else %>
+  <table class="index" id="listing_providers" data-hook>
+    <colgroup>
+      <col style="width: 30%">
+      <col style="width: 55%">
+      <col style="width: 15%">
+    </colgroup>
+    <tbody>
+      <% @partners.provider.each do |provider|%>
+        <tr id="<%= spree_dom_id provider %>" data-hook="admin_providers_index_rows" class="<%= cycle('odd', 'even')%>">
+          <td class='provider_logo align-center'><%= image_tag provider.logo.url(:medium) %></td>
+          <td class='provider_name'>
+            <%= link_to provider.name, edit_admin_partner_path(provider.id) %>
+          </td>
+          <td class='actions'>
+            <%= link_to_edit provider, :no_text => true %>
+            <%= link_to '', admin_partner_path(provider.id), class: 'fa fa-trash icon_link with-tip no-text', method: :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+

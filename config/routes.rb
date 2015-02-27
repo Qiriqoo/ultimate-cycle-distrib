@@ -17,8 +17,8 @@ Rails.application.routes.draw do
       resources :newsletters, only: [:index, :create, :destroy]
       resources :pages, only: [:index, :show, :update] do
         collection do
-          get 'contacts' => 'contacts#index'
-          get 'contacts/:id' => 'contacts#show', as: 'contact'
+          resources :partners, only: [:index, :new, :create, :edit, :update, :destroy]
+          resources :contacts, only: [:index, :show]
         end
       end
     end
