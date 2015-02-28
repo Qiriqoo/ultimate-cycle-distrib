@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :newsletters, only: :create
     resources :contacts, only: [:new, :create]
     resources :pages, only: [:show]
+    resources :partners, only: [:index]
 
     namespace :admin do
       resources :newsletters, only: [:index, :create, :destroy]
