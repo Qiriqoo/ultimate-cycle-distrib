@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150219181008) do
+ActiveRecord::Schema.define(version: 20150227130009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -349,6 +349,18 @@ ActiveRecord::Schema.define(version: 20150219181008) do
     t.string   "name"
     t.string   "slug"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_partners", force: true do |t|
+    t.string   "name"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.text     "description"
+    t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

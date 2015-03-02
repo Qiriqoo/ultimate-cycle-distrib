@@ -417,6 +417,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   newrelic_rpm
+  paperclip (~> 4.2)
   pg
   rails (= 4.1.8)
   rspec-rails (~> 3.0)

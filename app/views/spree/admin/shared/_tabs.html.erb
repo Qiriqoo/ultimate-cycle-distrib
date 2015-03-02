@@ -21,5 +21,5 @@
 <% end %>
 
 <% if can? :admin, Spree::Page %>
-  <%= tab *[:pages, :conditions_generales_de_ventes, :mentions_legales], icon: 'file', :match_path => '/pages' %>
+  <%= tab *[:pages], icon: 'file', :match_path => '/pages' %>
 <% end %>

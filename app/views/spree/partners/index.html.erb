@@ -1,0 +1,47 @@
+<h2 style='text-align: center'><%= Spree.t('pages.partners') %></h2>
+<br>
+<table>
+  <colgroup>
+    <col style="width: 30%">
+    <col style="width: 70%">
+  </colgroup>
+  <tbody>
+    <% @partners.partner.each do |partner|%>
+      <tr style='border-bottom: none'>
+        <td style='text-align: center'>
+          <%= image_tag partner.logo.url(:medium) %>
+        </td>
+        <td class='partner_name'>
+          <h4><%= partner.name %></h4>
+          <br>
+          <%= partner.description %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<hr>
+<br>
+<h2 style='text-align: center'><%= Spree.t('pages.providers') %></h2>
+<br>
+<table>
+  <colgroup>
+    <col style="width: 30%">
+    <col style="width: 70%">
+  </colgroup>
+  <tbody>
+    <% @partners.provider.each do |provider|%>
+      <tr style='border-bottom: none'>
+        <td style='text-align: center'>
+          <%= image_tag provider.logo.url(:medium) %>
+        </td>
+        <td class='provider_name'>
+          <h4><%= provider.name %></h4>
+          <br>
+          <%= provider.description %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

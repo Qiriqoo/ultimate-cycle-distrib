@@ -15,7 +15,7 @@
       <tr id="<%= spree_dom_id newsletter %>" data-hook="admin_users_index_rows" class="<%= cycle('odd', 'even')%>">
         <td class='user_email'><%= newsletter.email %></td>
         <td class='actions'>
-          <%= link_to_delete newsletter, :no_text => true %>
+          <%= link_to '', admin_newsletter_path(newsletter.id), class: 'fa fa-trash icon_link with-tip no-text', method: :delete %>
         </td>
       </tr>
     <% end %>

@@ -1,0 +1,45 @@
+<%= render :partial => 'spree/admin/shared/page_sub_menu' %>
+
+<% content_for :page_title do %>
+  <%= Spree.t('pages.partner.add_partner') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to Spree.t('pages.partner.return_list_all_partners'), admin_partners_path, :icon => 'arrow-left' %>
+  </li>
+<% end %>
+
+
+<%= form_for @partner, url: admin_partners_path, html: { multipart: true } do |f| %>
+
+  <span><%= flash[:alert] %></span>
+
+  <%= f.field_container :name do %>
+    <%= f.label :name, Spree.t(:name) %><br />
+    <%= f.text_field :name, class: 'fullwidth' %>
+  <% end %>
+
+  <%= f.field_container :logo do %>
+    <%= f.label :logo, Spree.t(:logo) %><br />
+    <%= f.file_field :logo %>
+  <% end %>
+
+  <%= f.field_container :status do %>
+    <%= f.label :status, Spree.t(:status) %><br />
+    <%= f.radio_button(:status, :partner) %>
+    <%= label_tag(:age_partner, Spree.t('pages.partner.partner')) %>
+    <%= f.radio_button(:status, :provider) %>
+    <%= label_tag(:age_adult, Spree.t('pages.partner.provider')) %>
+  <% end %>
+
+  <%= f.field_container :description do %>
+    <%= f.label :description, Spree.t(:description) %><br />
+    <%= f.text_area :description, class: 'fullwidth', rows: 10 %>
+  <% end %>
+
+
+  <div class="form-buttons filter-actions actions" data-hook="buttons">
+    <%= button Spree.t('actions.add'), 'ok' %>
+  </div>
+<% end %>
