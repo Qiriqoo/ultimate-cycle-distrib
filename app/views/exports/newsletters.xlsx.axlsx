@@ -1,0 +1,7 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: 'Newsletters') do |sheet|
+  sheet.add_row ["Email"]
+  Spree::Newsletter.pluck(:email).each do |email|
+    sheet.add_row [email]
+  end
+end

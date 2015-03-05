@@ -5,6 +5,10 @@ module Spree
       def index
         @search = Newsletter.search(params[:q])
         @newsletter = Newsletter.new
+        @last_export = Export.available.where(source: 'newsletters')
+                              .order('created_at DESC')
+                              .pluck(:created_at)
+                              .first
 
         if params[:q].present?
           @newsletters = Newsletter.ransack(params[:q]).result.page(params[:page])
@@ -31,6 +35,13 @@ module Spree
         else
           redirect_to admin_newsletters_path, alert: newsletter.errors.first.join(' ')
         end
+      end
+
+      def export
+
+        Export.create!(source: 'newsletters')
+
+        redirect_to admin_newsletters_path, notice: Spree.t('newsletter.export_created')
       end
 
       private

@@ -2,6 +2,7 @@
 
 <% content_for :page_title do %>
   <%= Spree.t('newsletter.list_users') %>
+  <%= " - #{@newsletters.count} emails" %>
 <% end %>
 
 
@@ -26,14 +27,13 @@
 
 
 <% content_for :sidebar do %>
-  <% content_for :sidebar_title do %>
-    <%= Spree.t('actions.add') %>
-  <% end %>
-
-
-  <%= form_for [:admin, @newsletter] do |f| %>
-    <span><%= flash[:alert] %></span>
-    <fieldset class="align-center no-border-top">
+  <br>
+  <div class="box align-center" data-hook="admin_users_index_create">
+    <h5 class='sidebar-title'>
+      <%= Spree.t('actions.add') %>
+    </h5>
+    <%= form_for [:admin, @newsletter] do |f| %>
+      <span><%= flash[:alert] %></span>
       <%= f.field_container :email do %>
         <%= f.label :email, Spree.t(:email) %><br />
         <%= f.text_field :email, :class => 'fullwidth' %>
@@ -41,8 +41,11 @@
       <div class="form-buttons filter-actions actions" data-hook="buttons">
         <%= button Spree.t('actions.add'), 'ok' %>
       </div>
-    </fieldset>
-  <% end %>
+    <% end %>
+  </div>
+  <br>
+  <hr>
+  <br>
   <div class="box align-center" data-hook="admin_users_index_search">
     <h5 class='sidebar-title'>
       <%= Spree.t(:search) %>
@@ -56,5 +59,19 @@
         <%= button Spree.t(:search), 'search' %>
       </div>
     <% end %>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <div class="box align-center" data-hook="admin_users_index_export">
+    <h5 class='sidebar-title'>
+      <%= Spree.t(:export) %>
+    </h5>
+    <%= link_to Spree.t(:export), export_admin_newsletters_path, class: 'fa fa-file button' %>
+    <br>
+    <br>
+    <span>Dernier export : </span>
+    <br>
+    <span><%= @last_export.to_formatted_s(:db) %></span>
   </div>
 <% end %>
