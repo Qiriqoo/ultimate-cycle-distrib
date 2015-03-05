@@ -39,7 +39,8 @@ module Spree
 
       def export
 
-        Export.create!(source: 'newsletters')
+        export = Export.create!(source: 'newsletters')
+        export.send_export(Newsletter.pluck(:email))
 
         redirect_to admin_newsletters_path, notice: Spree.t('newsletter.export_created')
       end

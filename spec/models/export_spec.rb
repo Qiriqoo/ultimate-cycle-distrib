@@ -10,7 +10,11 @@ describe Spree::Export do
 
     describe 'when is a newsletters export' do
 
-      subject { Spree::Export.create!(source: 'newsletters') }
+      subject do
+        export = Spree::Export.create!(source: 'newsletters')
+        export.send_export(['test@test.fr'])
+        export
+      end
 
       it 'creates a job in the right queue' do
         expect{
