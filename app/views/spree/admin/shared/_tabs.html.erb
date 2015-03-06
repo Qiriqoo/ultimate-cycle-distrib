@@ -7,7 +7,7 @@
 <% end %>
 
 <% if can? :admin, Spree::Admin::ReportsController %>
-  <%= tab *Spree::BackendConfiguration::REPORT_TABS, icon: 'file'  %>
+  <%= tab *[:reports, :exports], label: 'stats/exports', icon: 'file'  %>
 <% end %>
 
 <%= tab *Spree::BackendConfiguration::CONFIGURATION_TABS, label: 'configuration', icon: 'wrench', url: spree.edit_admin_general_settings_path %>

@@ -15,11 +15,8 @@ Rails.application.routes.draw do
     resources :partners, only: [:index]
 
     namespace :admin do
-      resources :newsletters, only: [:index, :create, :destroy] do
-        collection do
-          get :export
-        end
-      end
+      resources :newsletters, only: [:index, :create, :destroy]
+      resources :exports, only: [:index, :create]
       resources :pages, only: [:index, :show, :update] do
         collection do
           resources :partners, only: [:index, :new, :create, :edit, :update, :destroy]

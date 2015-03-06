@@ -1,0 +1,34 @@
+<%= render :partial => 'spree/admin/shared/report_sub_menu' %>
+
+<% content_for :page_title do %>
+  <%= Spree.t('exports.exports') %>
+<% end %>
+
+<div class="alpha six columns align-center">
+  <h3>Newsletters</h3>
+  <br>
+  <br>
+  <% if @export_in_progress.present? %>
+    <i class="fa fa-spinner fa-spin"></i>
+    <br>
+    <%= Spree.t('exports.in_progress') %>
+    <br>
+    <%= Spree.t('exports.in_progress_instructions') %>
+    <br>
+    <%= link_to Spree.t('actions.refresh'), admin_exports_path %>
+   <% else %>
+    <%= form_for [:admin, @export_newsletters_new] do |f| %>
+      <%= f.hidden_field :source, value: 'newsletters' %>
+      <div class="form-buttons filter-actions actions" data-hook="buttons">
+        <%= button Spree.t('exports.new'), 'file' %>
+      </div>
+    <% end %>
+  <% end %>
+  <br>
+  <br>
+  <span><%= Spree.t('exports.last') %></span>
+  <br>
+  <% if @last_newsletters_export.present? %>
+    <span><%= @last_newsletters_export.to_formatted_s(:db) %></span>
+  <% end %>
+</div>

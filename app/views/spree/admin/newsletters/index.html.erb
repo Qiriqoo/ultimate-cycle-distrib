@@ -60,18 +60,4 @@
       </div>
     <% end %>
   </div>
-  <br>
-  <hr>
-  <br>
-  <div class="box align-center" data-hook="admin_users_index_export">
-    <h5 class='sidebar-title'>
-      <%= Spree.t(:export) %>
-    </h5>
-    <%= link_to Spree.t(:export), export_admin_newsletters_path, class: 'fa fa-file button' %>
-    <br>
-    <br>
-    <span>Dernier export : </span>
-    <br>
-    <span><%= @last_export.to_formatted_s(:db) %></span>
-  </div>
 <% end %>
