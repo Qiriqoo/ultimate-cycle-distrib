@@ -1,15 +1,68 @@
 fr:
+  views:
+    pagination:
+      previous: Précédent
+      first: Première page
+      next: Suivant
+      last: Dernière page
   spree:
     email: Email
-    admin: Administrateur
+    administrator: Administrateur
     enterprise: Entreprise
     active: Actif
     inactive: Inactif
     quick_search: Recherche rapide
+    no_resource_found: Aucune ressource
+    new_promotion_category: Nouvelle catégorie de promotion
+    lifetime_stats: Statistiques
+    total_sales: Achats total
+    num_orders: Nb total de commandes
+    average_order_value: Panier moyen
+    member_since: Membre depuis
+    create_new_order: Créer une nouvelle commande
+    read: Lu
+    unread: Non lu
+    page: pages
+    admin:
+      tab:
+        products: produits
+        users: utilisateurs
+        configuration: config
+      user:
+        user_information: Informations utilisateurs
+        account: Compte
+        addresses: Adresses
+        orders: Commandes
+        items: Produits
     actions:
       add: Ajouter
       subscribe: S'abonner
+      send: Envoyer
     newsletter:
       list_users: Liste des abonnés à la newsletter
-      added: 'Email ajouté avec succés'
-      deleted: 'Email supprimé avec succés'
+      added: Email ajouté avec succés
+      deleted: Email supprimé avec succés
+    pages:
+      conditions_generales_de_ventes: Conditions Générales de Ventes
+      mentions_legales: Mentions légales
+      contacts: Contacts
+      updated: Page mise à jour avec succés
+      partners_providers: Partenaires / Fournisseurs
+      partners: Partenaires
+      providers: Fournisseurs
+      partner:
+        provider: Fournisseur
+        partner: Partenaire
+        add_partner: Ajouter un partenaire / fournisseur
+        edit_partner: Modifier un partenaire / fournisseur
+        return_list_all_partners: Retour à la liste des partenaires / fournisseurs
+        added: Le partneaire / fournisseur à bien été enregistré
+        edited: Le partneaire / fournisseur à bien été modifié
+        deleted: Le partneaire / fournisseur à bien été supprimé
+      contact:
+        subject_placeholder: Le sujet de votre message
+        email_placeholder: Votre email
+        content_placeholder: Votre message
+        contact: Contact
+        return_list_contacts: Retour à la liste des contacts
+        added: Votre message à bien été enregistré

@@ -1,6 +1,14 @@
 <div id="spree-footer">
     <footer id="footer" class="row" data-hook>
       <div id="footer-left" class="col-md-6" data-hook>
+        <%= link_to Spree.t('pages.contact.contact') , new_contact_path %>
+        <br>
+        <%= link_to Spree.t('pages.partners_providers') , partners_path %>
+        <br>
+        <% Spree::Page.order('created_at DESC').each do |page| %>
+          <%= link_to Spree.t("pages.#{page.name.parameterize.underscore}"), page_path(page.slug) %>
+          <br>
+        <% end %>
         <p><%= Spree.t :powered_by  %>&nbsp;<%= link_to 'Spree', 'http://spreecommerce.com/' %></p>
       </div>
       <div id="footer-right" class="col-md-6" data-hook>
@@ -10,6 +18,7 @@
           <%= f.text_field :email, :class => 'form-control' %>
           <%= button Spree.t('actions.subscribe'), "S'abonner" %>
         <% end %>
+
       </div>
     </footer>
 </div>

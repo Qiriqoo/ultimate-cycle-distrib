@@ -12,7 +12,6 @@ Spree.config do |config|
   config.currency = 'EUR'
   config.default_country_id = 1
 
-
 end
 
 Spree.user_class = "Spree::User"
@@ -27,8 +26,7 @@ rails_config.promotions.actions = [Spree::Promotion::Actions::CreateAdjustment]
 
 # CALCULATORS
 
-rails_config.calculators.promotion_actions_create_item_adjustments = [Spree::Calculator::FlatRate]
-rails_config.calculators.promotion_actions_create_adjustments = [Spree::Calculator::FlatRate]
+rails_config.calculators.promotion_actions_create_adjustments = [Spree::Calculator::FlatPercentItemTotal, Spree::Calculator::FlatRate]
 rails_config.calculators.shipping_methods = [Spree::Calculator::Shipping::FlatRate]
 
 Spree::PermittedAttributes.user_attributes.push(:active)

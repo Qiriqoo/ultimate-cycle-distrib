@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224190338) do
+ActiveRecord::Schema.define(version: 20150227130009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,6 +103,15 @@ ActiveRecord::Schema.define(version: 20150224190338) do
 
   add_index "spree_calculators", ["calculable_id", "calculable_type"], name: "index_spree_calculators_on_calculable_id_and_calculable_type", using: :btree
   add_index "spree_calculators", ["id", "type"], name: "index_spree_calculators_on_id_and_type", using: :btree
+
+  create_table "spree_contacts", force: :cascade do |t|
+    t.string   "email"
+    t.string   "subject"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "read",       default: false
+  end
 
   create_table "spree_countries", force: :cascade do |t|
     t.string   "iso_name"
@@ -326,6 +335,26 @@ ActiveRecord::Schema.define(version: 20150224190338) do
   end
 
   add_index "spree_orders_promotions", ["order_id", "promotion_id"], name: "index_spree_orders_promotions_on_order_id_and_promotion_id", using: :btree
+
+  create_table "spree_pages", force: :cascade do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.text     "content",    default: ""
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_partners", force: :cascade do |t|
+    t.string   "name"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.text     "description"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_payment_capture_events", force: :cascade do |t|
     t.decimal  "amount",     precision: 10, scale: 2, default: 0.0

@@ -10,9 +10,18 @@ Rails.application.routes.draw do
   Spree::Core::Engine.routes.draw do
 
     resources :newsletters, only: :create
+    resources :contacts, only: [:new, :create]
+    resources :pages, only: [:show]
+    resources :partners, only: [:index]
 
     namespace :admin do
       resources :newsletters, only: [:index, :create, :destroy]
+      resources :pages, only: [:index, :show, :update] do
+        collection do
+          resources :partners, only: [:index, :new, :create, :edit, :update, :destroy]
+          resources :contacts, only: [:index, :show]
+        end
+      end
     end
   end
           # The priority is based upon order of creation: first created -> highest priority.
