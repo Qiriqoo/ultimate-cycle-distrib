@@ -1,11 +1,25 @@
-<%= render :partial => 'spree/admin/shared/page_sub_menu' %>
-
 <% content_for :page_title do %>
   <%= Spree.t('pages.contacts') %>
 <% end %>
 
 
-<table class="index" id="listing_contacts" data-hook>
+<% content_for :table_filter do %>
+  <div data-hook="admin_users_index_search">
+    <%= search_form_for [:admin, @search], url: admin_contacts_url do |f| %>
+      <div class="form-group">
+        <%= f.label :email, Spree.t(:email) %> <br>
+        <%= f.text_field :email, :class => "form-control js-quick-search-target" %>
+      </div>
+      <div data-hook="admin_users_index_search_buttons" class="form-actions">
+        <%= button Spree.t(:search), 'search' %>
+      </div>
+    <% end %>
+  </div>
+
+<% end %>
+
+
+<table class="table" id="listing_contacts" data-hook>
   <colgroup>
     <col style="width: 25%">
     <col style="width: 75%">
@@ -27,23 +41,4 @@
 
 <%= paginate @contacts %>
 
-
-
-<% content_for :sidebar do %>
-  <% content_for :sidebar_title do %>
-    <%= Spree.t(:search) %>
-  <% end %>
-
-  <div class="box align-center" data-hook="admin_users_index_search">
-    <%= search_form_for [:admin, @search], url: admin_contacts_url do |f| %>
-      <div class="field">
-        <%= f.label :email, Spree.t(:email) %> <br>
-        <%= f.text_field :email, :class => 'fullwidth' %>
-      </div>
-      <div data-hook="admin_users_index_search_buttons">
-        <%= button Spree.t(:search), 'search' %>
-      </div>
-    <% end %>
-  </div>
-<% end %>
 

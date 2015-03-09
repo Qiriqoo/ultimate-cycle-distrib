@@ -1,13 +1,10 @@
-<%= render :partial => 'spree/admin/shared/page_sub_menu' %>
 
 <% content_for :page_title do %>
   <%= Spree.t('pages.partners_providers') %>
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
-    <%= button_link_to Spree.t('pages.partner.add_partner'), new_admin_partner_path, :icon => 'plus' %>
-  </li>
+  <%= button_link_to Spree.t('pages.partner.add_partner'), new_admin_partner_path, :icon => 'plus', :class => "btn-success" %>
 <% end %>
 
 
@@ -16,17 +13,12 @@
 <br>
 
 <% if @partners.partner.empty? %>
-  <div class="alpha sixteen columns no-objects-found">
-    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/partner')) %>,
+  <div class="alert alert-info no-objects-found">
+    <%= Spree.t(:no_resource_found, resource: plural_resource_name(Spree::Partner)) %>,
     <%= link_to Spree.t(:add_one), new_admin_partner_path(status: 0) %>!
   </div>
 <% else %>
-  <table class="index" id="listing_partners" data-hook>
-    <colgroup>
-      <col style="width: 30%">
-      <col style="width: 55%">
-      <col style="width: 15%">
-    </colgroup>
+  <table class="table" id="listing_partners" data-hook>
     <tbody>
       <% @partners.partner.each do |partner|%>
         <tr id="<%= spree_dom_id partner %>" data-hook="admin_partners_index_rows" class="<%= cycle('odd', 'even')%>">
@@ -34,9 +26,13 @@
           <td class='partner_name'>
             <%= link_to partner.name, edit_admin_partner_path(partner.id) %>
           </td>
-          <td class='actions'>
+          <td class='actions actions-2 text-right'>
             <%= link_to_edit partner, :no_text => true %>
-            <%= link_to '', admin_partner_path(partner.id), class: 'fa fa-trash icon_link with-tip no-text', method: :delete %>
+            <%= link_to admin_partner_path(partner.id), method: :delete, title: Spree.t('actions.destroy') do %>
+              <button class="btn btn-danger btn-sm no-text">
+                <span class='icon icon-delete'></span>
+              </button>
+            <% end %>
           </td>
         </tr>
       <% end %>
@@ -48,12 +44,12 @@
 <br>
 <br>
 <% if @partners.provider.empty? %>
-  <div class="alpha sixteen columns no-objects-found">
-    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/partner')) %>,
+  <div class="alert alert-info no-objects-found">
+    <%= Spree.t(:no_resource_found, resource: plural_resource_name(Spree::Partner)) %>,
     <%= link_to Spree.t(:add_one), new_admin_partner_path(status: 1) %>!
   </div>
 <% else %>
-  <table class="index" id="listing_providers" data-hook>
+  <table class="table" id="listing_providers" data-hook>
     <colgroup>
       <col style="width: 30%">
       <col style="width: 55%">
@@ -66,9 +62,13 @@
           <td class='provider_name'>
             <%= link_to provider.name, edit_admin_partner_path(provider.id) %>
           </td>
-          <td class='actions'>
+          <td class='actions actions-2 text-right'>
             <%= link_to_edit provider, :no_text => true %>
-            <%= link_to '', admin_partner_path(provider.id), class: 'fa fa-trash icon_link with-tip no-text', method: :delete %>
+            <%= link_to admin_partner_path(provider.id), method: :delete, title: Spree.t('actions.destroy') do %>
+              <button class="btn btn-danger btn-sm no-text">
+                <span class='icon icon-delete'></span>
+              </button>
+            <% end %>
           </td>
         </tr>
       <% end %>
