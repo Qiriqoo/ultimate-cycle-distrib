@@ -176,7 +176,7 @@ ActiveRecord::Schema.define(version: 20150305143807) do
   end
 
   create_table "spree_exports", force: true do |t|
-    t.string   "source"
+    t.integer  "source"
     t.integer  "status",     default: 0
     t.datetime "created_at"
     t.datetime "updated_at"

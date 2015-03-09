@@ -18,13 +18,11 @@ class AdminMailer < Spree::BaseMailer
     mail(subject: "Le stock de produit pour #{stock_item.variant_name} est désormais vide")
   end
 
-  def export(type, resources)
+  def export(source, resources)
     @resources = resources
-    xlsx = render_to_string(handlers: [:axlsx],
-                            formats: [:xlsx],
-                            template: "exports/#{type}")
+    xlsx = render_to_string(handlers: [:axlsx], formats: [:xlsx], template: "exports/#{source}")
 
-    attachments["#{type}-#{Date.today.to_s}.xlsx"] = {mime_type: Mime::XLSX, content: xlsx}
-    mail(subject: "Export de vos #{type.capitalize} - #{Date.today.to_s}")
+    attachments["#{source}-#{Date.today.to_s}.xlsx"] = {mime_type: Mime::XLSX, content: xlsx}
+    mail(subject: "Export de vos #{source.capitalize} - #{Date.today.to_s}")
   end
 end
