@@ -11,16 +11,12 @@ describe Spree::StockItem do
       FactoryGirl.create(:admin_user)
     end
 
-    before(:each) do
-      subject.variant.name = 'Test'
-      subject.save!
-    end
-
     context 'when there are still items' do
       it 'does not send an email to warn the administrators' do
         expect{
           subject.set_count_on_hand(1)
-        }.to change{deliveries_with_subject("Le stock de produit pour Test est désormais vide").count}.by 0
+          Delayed::Worker.new.work_off
+        }.to change{deliveries_with_subject("Le stock de produit pour #{subject.variant_name} est désormais vide").count}.by 0
       end
     end
 
@@ -28,7 +24,8 @@ describe Spree::StockItem do
       it 'sends an email to warn the administrators' do
         expect{
           subject.set_count_on_hand(0)
-        }.to change{deliveries_with_subject('Le stock de produit pour Test est désormais vide').count}.by 1
+          Delayed::Worker.new.work_off
+        }.to change{deliveries_with_subject("Le stock de produit pour #{subject.variant_name} est désormais vide").count}.by 1
       end
     end
   end
