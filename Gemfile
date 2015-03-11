@@ -3,10 +3,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 gem 'pg'
 gem 'unicorn'
-gem 'paperclip', '~> 4.2'
-gem 'axlsx_rails'
-
 gem 'delayed_job_active_record'
+
+#ASSETS
+gem 'axlsx_rails'
+gem 'paperclip', '~> 4.2'
+gem 'aws-sdk', '< 2.0'
 
 #JS
 gem 'uglifier', '>= 1.3.0'
