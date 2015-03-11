@@ -20,7 +20,7 @@ module UserExtension
     end
 
     def warn_admin
-      AdminMailer.warn_for_new_user(self).deliver
+      AdminMailer.delay.warn_for_new_user(self)
     end
 
   end
