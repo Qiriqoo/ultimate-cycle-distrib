@@ -1,0 +1,16 @@
+<% content_for(:subject) do %>
+  <%= @subject %>
+<% end %>
+
+<% content_for(:body) do %>
+  <span>Email : </span>
+  <span><%= @contact.email %></span>
+  <br>
+  <br>
+  <span>Concernant : </span>
+  <span><%= @contact.subject %></span>
+  <br>
+  <br>
+  <span>Message : </span>
+  <span><%= simple_format(@contact.content) %></span>
+<% end %>
