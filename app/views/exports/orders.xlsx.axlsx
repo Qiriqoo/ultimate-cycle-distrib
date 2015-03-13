@@ -1,0 +1,7 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: 'Commandes') do |sheet|
+  sheet.add_row Spree::Order.column_names
+  @resources.each do |order|
+    sheet.add_row order.attributes.values
+  end
+end

@@ -1,0 +1,5 @@
+<% if Spree.user_class && can?(:admin, Spree.user_class) %>
+  <ul class="nav nav-sidebar">
+    <%= main_menu_tree Spree.t(:users), icon: "user", sub_menu: "user", url: "#sidebar-users" %>
+  </ul>
+<% end %>

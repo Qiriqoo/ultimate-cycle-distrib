@@ -1,0 +1,84 @@
+<% content_for :page_title do %>
+  <%= Spree.t('exports.exports') %>
+<% end %>
+
+<div class="col-md-12 text-center">
+  <h3>Newsletters</h3>
+  <br>
+  <br>
+  <% if @exports_in_progress[:newsletters].present? %>
+    <i class="fa fa-spinner fa-spin"></i>
+    <br>
+    <%= Spree.t('exports.in_progress') %>
+    <br>
+    <%= Spree.t('exports.in_progress_instructions') %>
+    <br>
+    <%= link_to Spree.t('actions.refresh'), admin_exports_path %>
+   <% else %>
+    <%= form_for [:admin, @export_new] do |f| %>
+      <%= f.hidden_field :source, value: :newsletters %>
+      <div class="form-actions filter-actions actions" data-hook="buttons">
+        <%= button Spree.t('exports.new'), 'file' %>
+      </div>
+    <% end %>
+  <% end %>
+  <br>
+  <br>
+  <span><%= Spree.t('exports.last') %></span>
+  <br>
+  <% if @last_exports[:newsletters].present? %>
+    <span><%= @last_exports[:newsletters].to_formatted_s(:db) %></span>
+  <% end %>
+</div>
+
+
+<div class="col-md-12 text-center">
+  <h3>Commandes</h3>
+  <br>
+  <% if @exports_in_progress[:orders].present? %>
+    <i class="fa fa-spinner fa-spin"></i>
+    <br>
+    <%= Spree.t('exports.in_progress') %>
+    <br>
+    <%= Spree.t('exports.in_progress_instructions') %>
+    <br>
+    <%= link_to Spree.t('actions.refresh'), admin_exports_path %>
+  <% else %>
+    <%= form_for [:admin, @export_new] do |f| %>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= label_tag nil, Spree.t(:start)%>
+            <div class="input-group">
+              <%= text_field_tag :start, nil, class: 'datepicker datepicker-to form-control' %>
+              <span class="input-group-addon">
+                <i class="icon icon-calendar"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <%= label_tag nil, Spree.t(:end) %>
+          <div class="input-group">
+            <%= text_field_tag :end, nil, class: 'datepicker datepicker-to form-control' %>
+            <span class="input-group-addon">
+              <i class="icon icon-calendar"></i>
+            </span>
+          </div>
+        </div>
+        <%= f.hidden_field :source, value: :orders %>
+      </div>
+      <div class="form-actions" data-hook="buttons">
+        <%= button Spree.t('exports.new'), 'file' %>
+      </div>
+    <% end %>
+  <% end %>
+  <br>
+  <br>
+  <span><%= Spree.t('exports.last') %></span>
+  <br>
+  <% if @last_exports[:orders].present? %>
+    <span><%= @last_exports[:orders].to_formatted_s(:db) %></span>
+  <% end %>
+</div>

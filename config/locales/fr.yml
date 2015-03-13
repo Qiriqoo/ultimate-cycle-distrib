@@ -23,6 +23,7 @@ fr:
     read: Lu
     unread: Non lu
     page: pages
+    export: exports
     admin:
       tab:
         products: produits
@@ -38,6 +39,14 @@ fr:
       add: Ajouter
       subscribe: S'abonner
       send: Envoyer
+      refresh: Actualiser
+    exports:
+      exports: Exports
+      in_progress: Export en cours
+      in_progress_instructions: Un mail contenant votre export sera envoyé
+      last: Dernier export
+      new: Nouvel export
+      export_created: Un nouvel export est en cours
     newsletter:
       list_users: Liste des abonnés à la newsletter
       added: Email ajouté avec succés

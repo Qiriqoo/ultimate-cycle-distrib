@@ -1,0 +1,6 @@
+<% if can? :admin, Spree::Export %>
+  <ul class="nav nav-sidebar">
+    <%= main_menu_tree Spree.t(:export), icon: 'export', sub_menu: "export", url: "#sidebar-export" %>
+  </ul>
+<% end %>
+

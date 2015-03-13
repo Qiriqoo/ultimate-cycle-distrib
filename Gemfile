@@ -4,6 +4,9 @@ gem 'rails', '4.2'
 gem 'pg'
 gem 'unicorn'
 gem 'paperclip', '~> 4.2'
+gem 'axlsx_rails'
+
+gem 'delayed_job_active_record'
 
 #JS
 gem 'uglifier', '>= 1.3.0'
