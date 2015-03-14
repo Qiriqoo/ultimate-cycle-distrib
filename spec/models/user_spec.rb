@@ -22,6 +22,7 @@ describe Spree::User do
     it 'send an email to warn the administrators' do
       expect{
         user.save!
+        Delayed::Worker.new.work_off
       }.to change{deliveries_with_subject("Un nouvel utilisateur viens de s'inscrire").count}.by 1
     end
   end
@@ -42,6 +43,7 @@ describe Spree::User do
     it 'does not send an email to warn the administrators' do
       expect{
         admin.save!
+        Delayed::Worker.new.work_off
       }.to change{deliveries_with_subject("Un nouvel utilisateur viens de s'inscrire").count}.by 0
     end
   end
