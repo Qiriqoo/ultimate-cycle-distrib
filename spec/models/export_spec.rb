@@ -27,10 +27,10 @@ describe Spree::Export do
       it 'sends an email with a correct attachment' do
         subject
         Delayed::Worker.new.work_off
-        attachment = ActionMailer::Base.deliveries.last.attachments.first
+        attachments = ActionMailer::Base.deliveries.last.attachments.map(&:filename)
 
-        expect(attachment).to_not be_nil
-        expect(attachment.filename).to eq("#{subject.source}-#{Date.today.to_s}.xlsx")
+        expect(attachments).to_not be_empty
+        expect(attachments).to include("#{subject.source}-#{Date.today.to_s}.xlsx")
       end
 
       it 'updates the export to available after' do
