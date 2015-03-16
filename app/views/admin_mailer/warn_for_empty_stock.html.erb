@@ -1,0 +1,12 @@
+<% content_for(:subject) do %>
+  <%= @subject %>
+<% end %>
+
+<% content_for(:body) do %>
+  <span>Produit : </span>
+  <span><%= @stock_item.variant_name %></span>
+  <br>
+  <br>
+  <span>Emplacement du stock : </span>
+  <span><%= @stock_item.stock_location.name %></span>
+<% end %>

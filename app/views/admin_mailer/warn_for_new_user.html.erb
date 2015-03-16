@@ -1,0 +1,14 @@
+<% content_for(:subject) do %>
+  <%= @subject %>
+<% end %>
+
+<% content_for(:body) do %>
+  <span>Email : </span>
+  <span><%= @user.email %></span>
+  <br>
+  <span>Crée le : </span>
+  <span><%= @user.created_at.to_formatted_s(:db) %></span>
+  <br>
+  <br>
+  <span>Rendez-vous sur l'administration afin d'activer son compte</span>
+<% end %>
