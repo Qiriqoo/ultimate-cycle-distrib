@@ -15,6 +15,7 @@ Spree.config do |config|
   config.currency_thousands_separator = ''
   config.currency_symbol_position = 'after'
   config.allow_ssl_in_development_and_test = false
+  config.admin_interface_logo = 'logo/logo.png'
 
 end
 
