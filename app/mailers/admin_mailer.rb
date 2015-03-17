@@ -2,7 +2,7 @@ class AdminMailer < Spree::BaseMailer
   layout 'mailer'
 
   default to: Proc.new { Spree::User.admin.pluck(:email) },
-          from: 'no_reply@ultimate-cycle-distribution.com'
+          from: Proc.new { Spree::Store.last.mail_from_address }
 
 
   before_action :set_logo
