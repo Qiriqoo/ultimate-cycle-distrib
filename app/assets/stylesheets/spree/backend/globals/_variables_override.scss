@@ -1,0 +1,45 @@
+$color-1: #FFFFFF !default;    // White
+$color-2: #D05D07 !default;    // Brown
+$color-3: #555669 !default;    // Light Grey
+$color-4: #363742 !default;    // Dark Grey
+$color-5: #C60F13 !default;    // Red
+$color-6: #FF9300 !default;    // Yellow
+$color-7: #E86809 !default;    // Light Brown
+
+$color-success:                  #9FC820 !default;
+
+$color-headers:                  $color-2 !default;
+
+$color-link:                     $color-2 !default;
+$color-link-hover:               very-light($color-2, 35) !default;
+$color-link-active:              very-light($color-2, 35) !default;
+$color-link-focus:               very-light($color-2, 35) !default;
+$color-link-visited:             $color-2 !default;
+
+$color-btn-bg:                   $color-2 !default;
+$color-btn-text:                 $color-1 !default;
+$color-btn-hover-bg:             $color-7 !default;
+$color-btn-hover-text:           $color-1 !default;
+
+
+$color-action-remove-bg:         very-light($color-5, 15) !default;
+$color-action-remove-brd:        very-light($color-5, 20) !default;
+$color-action-edit-bg:           very-light($color-2, 5  ) !default;
+$color-action-edit-brd:          very-light($color-2, 20 ) !default;
+$color-action-capture-bg:        very-light($color-2, 5  ) !default;
+$color-action-capture-brd:       very-light($color-2, 20 ) !default;
+$color-action-save-bg:           very-light($color-2, 5  ) !default;
+$color-action-save-brd:          very-light($color-2, 20 ) !default;
+$color-action-mail-bg:           very-light($color-2, 5  ) !default;
+$color-action-mail-brd:          very-light($color-2, 20 ) !default;
+
+$color-ste-complete-bg:          $color-2 !default;
+$color-ste-completed-bg:         $color-2 !default;
+$color-ste-sold-bg:              $color-2 !default;
+$color-ste-paid-bg:              $color-2 !default;
+$color-ste-shipped-bg:           $color-2 !default;
+$color-ste-ready-bg:             $color-2 !default;
+$color-ste-delivery-bg:          $color-2 !default;
+$color-ste-active-bg:            $color-2 !default;
+$color-ste-considered_safe-bg:   $color-2 !default;
+$color-ste-success-bg:           $color-2 !default;
