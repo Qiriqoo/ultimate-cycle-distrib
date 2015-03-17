@@ -4,7 +4,7 @@
 
 <% content_for :sidebar do %>
   <nav class="menu">
-    <ul class="sidebar" data-hook="admin_configurations_sidebar_menu">
+    <ul class="sidebar">
       <%= configurations_sidebar_menu_item Spree.t(:general_settings), edit_admin_general_settings_path %>
       <%= configurations_sidebar_menu_item Spree.t(:tax_categories), admin_tax_categories_path %>
       <%= configurations_sidebar_menu_item Spree.t(:tax_rates), admin_tax_rates_path %>
