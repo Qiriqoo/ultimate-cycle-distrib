@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :partners, only: [:index]
 
     namespace :admin do
-      resources :newsletters, only: [:index, :create, :destroy]
+      resources :newsletters, only: [:index, :new, :create, :destroy]
       resources :exports, only: [:index, :create]
       resources :pages, only: [:index, :show, :update] do
         collection do
