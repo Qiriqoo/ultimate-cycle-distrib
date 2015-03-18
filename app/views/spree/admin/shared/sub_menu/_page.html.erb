@@ -1,7 +1,7 @@
 <ul id="sidebar-page" class="collapse nav nav-pills nav-stacked" data-hook="admin_page_sub_tabs">
-  <%= tab :conditions_generales_de_ventes, url: admin_page_path(Spree::Page.find_by(slug: 'conditions-generales-de-ventes')), match_path: "/pages/#{Spree::Page.find_by(slug: 'conditions-generales-de-ventes').id}" %>
+  <%= tab 'Conditions générales de ventes', url: admin_page_path(Spree::Page.find_by(slug: 'conditions-generales-de-ventes')), match_path: "/pages/#{Spree::Page.find_by(slug: 'conditions-generales-de-ventes').id}" %>
 
-  <%= tab :mentions_legales, url: admin_page_path(Spree::Page.find_by(slug: 'mentions-legales')), match_path: "/pages/#{Spree::Page.find_by(slug: 'mentions-legales').id}" %>
+  <%= tab 'Mentions légales', url: admin_page_path(Spree::Page.find_by(slug: 'mentions-legales')), match_path: "/pages/#{Spree::Page.find_by(slug: 'mentions-legales').id}" %>
 
   <%= tab :contacts, url: admin_contacts_path %>
 
