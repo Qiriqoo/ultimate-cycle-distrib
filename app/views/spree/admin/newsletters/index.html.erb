@@ -1,12 +1,32 @@
-<%= render :partial => 'spree/admin/shared/user_sub_menu' %>
-
 <% content_for :page_title do %>
   <%= Spree.t('newsletter.list_users') %>
   <%= " - #{@newsletters.count} emails" %>
 <% end %>
 
 
-<table class="index" id="listing_users" data-hook>
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t('newsletter.new'), new_admin_newsletter_url, class: "btn-success", icon: 'add' %>
+<% end %>
+
+<% content_for :table_filter_title do %>
+  <%= Spree.t(:search) %>
+<% end %>
+
+<% content_for :table_filter do %>
+  <div data-hook="admin_newsletters_index_search">
+    <%= search_form_for [:admin, @search], url: admin_newsletters_url do |f| %>
+      <div class="form-group">
+        <%= f.label :email_cont, Spree.t(:email) %> <br>
+        <%= f.text_field :email_cont, class: "form-control js-quick-search-target" %>
+      </div>
+      <div class='form-actions'>
+        <%= button Spree.t(:search), 'search' %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<table class="table" id="listing_users">
   <colgroup>
     <col style="width: 85%">
     <col style="width: 15%">
@@ -15,8 +35,8 @@
     <% @newsletters.each do |newsletter|%>
       <tr id="<%= spree_dom_id newsletter %>" data-hook="admin_users_index_rows" class="<%= cycle('odd', 'even')%>">
         <td class='user_email'><%= newsletter.email %></td>
-        <td class='actions'>
-          <%= link_to '', admin_newsletter_path(newsletter.id), class: 'fa fa-trash icon_link with-tip no-text', method: :delete %>
+        <td class='actions actions-2 text-right'>
+          <%= link_to_delete newsletter, :no_text => true %>
         </td>
       </tr>
     <% end %>
@@ -24,40 +44,3 @@
 </table>
 
 <%= paginate @newsletters %>
-
-
-<% content_for :sidebar do %>
-  <br>
-  <div class="box align-center" data-hook="admin_users_index_create">
-    <h5 class='sidebar-title'>
-      <%= Spree.t('actions.add') %>
-    </h5>
-    <%= form_for [:admin, @newsletter] do |f| %>
-      <span><%= flash[:alert] %></span>
-      <%= f.field_container :email do %>
-        <%= f.label :email, Spree.t(:email) %><br />
-        <%= f.text_field :email, :class => 'fullwidth' %>
-      <% end %>
-      <div class="form-buttons filter-actions actions" data-hook="buttons">
-        <%= button Spree.t('actions.add'), 'ok' %>
-      </div>
-    <% end %>
-  </div>
-  <br>
-  <hr>
-  <br>
-  <div class="box align-center" data-hook="admin_users_index_search">
-    <h5 class='sidebar-title'>
-      <%= Spree.t(:search) %>
-    </h5>
-    <%= search_form_for [:admin, @search], url: admin_newsletters_url do |f| %>
-      <div class="field">
-        <%= f.label :email_cont, Spree.t(:email) %> <br>
-        <%= f.text_field :email_cont, :class => 'fullwidth' %>
-      </div>
-      <div data-hook="admin_users_index_search_buttons">
-        <%= button Spree.t(:search), 'search' %>
-      </div>
-    <% end %>
-  </div>
-<% end %>

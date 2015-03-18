@@ -6,10 +6,6 @@ module Spree
         redirect_to admin_page_path(Page.find_by(slug: 'conditions-generales-de-ventes').id)
       end
 
-      def show
-        @page = Page.find(params[:id])
-      end
-
       def update
         page = Page.find(params[:id])
         if page.update(page_params)

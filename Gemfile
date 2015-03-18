@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.8'
+gem 'rails', '4.2'
 gem 'pg'
 gem 'unicorn'
 gem 'delayed_job_active_record'
@@ -22,11 +22,11 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'haml-rails', '~> 0.8'
 
 #SPREE
-gem 'spree', github: 'spree/spree', branch: '2-4-stable'
-gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
-gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
-gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '2-4-stable'
-gem 'spree_editor', github: 'spree/spree_editor', branch: '2-4-stable'
+gem 'spree', github: 'spree/spree', branch: '3-0-stable'
+gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
+gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
+gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '3-0-stable'
+gem 'spree_editor', github: 'spree/spree_editor', branch: '3-0-stable'
 
 #ANALYTICS
 gem 'newrelic_rpm'

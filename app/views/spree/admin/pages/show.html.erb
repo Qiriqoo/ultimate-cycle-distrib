@@ -1,16 +1,14 @@
-<%= render :partial => 'spree/admin/shared/page_sub_menu' %>
-
 <% content_for :page_title do %>
   <%= Spree.t("pages.#{@page.name.parameterize.underscore}") %>
 <% end %>
 
 <%= form_for [:admin, @page] do |f| %>
-  <span><%= flash[:alert] %></span>
   <%= f.field_container :content do %>
     <%= f.text_area :content, class: 'fullwidth tinymce', rows: 20 %>
     <%= tinymce %>
   <% end %>
-  <div class="form-buttons filter-actions actions" data-hook="buttons">
+  <br>
+  <div class="form-buttons filter-actions actions text-center" data-hook="buttons">
     <%= button Spree.t('actions.update'), 'ok' %>
   </div>
 <% end %>

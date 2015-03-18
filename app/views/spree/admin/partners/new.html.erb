@@ -1,19 +1,13 @@
-<%= render :partial => 'spree/admin/shared/page_sub_menu' %>
-
 <% content_for :page_title do %>
   <%= Spree.t('pages.partner.add_partner') %>
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
-    <%= button_link_to Spree.t('pages.partner.return_list_all_partners'), admin_partners_path, :icon => 'arrow-left' %>
-  </li>
+  <%= button_link_to Spree.t('pages.partner.return_list_all_partners'), admin_partners_path, class: "btn-primary", icon: 'chevron-left' %>
 <% end %>
 
 
 <%= form_for @partner, url: admin_partners_path, html: { multipart: true } do |f| %>
-
-  <span><%= flash[:alert] %></span>
 
   <%= f.field_container :name do %>
     <%= f.label :name, Spree.t(:name) %><br />

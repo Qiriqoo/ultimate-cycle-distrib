@@ -1,0 +1,24 @@
+<% content_for :page_title do %>
+  <%= Spree.t('newsletter.list_users') %>
+  <%= " - #{@newsletters} emails" %>
+<% end %>
+
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t('newsletter.return_list_newsletters'), admin_newsletters_url, class: "btn-primary", icon: 'chevron-left' %>
+<% end %>
+
+
+<div class="text-center">
+  <h3><%= Spree.t('actions.add') %></h3>
+
+  <%= form_for [:admin, @newsletter] do |f| %>
+    <div class="form-group">
+      <%= f.label :email, Spree.t(:email) %><br />
+      <%= f.text_field :email, :class => 'fullwidth' %>
+    </div>
+    <div class="form-buttons filter-actions actions" data-hook="buttons">
+      <%= button Spree.t('actions.add'), 'ok' %>
+    </div>
+  <% end %>
+</div>

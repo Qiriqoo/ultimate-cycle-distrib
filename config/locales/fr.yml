@@ -26,6 +26,8 @@ fr:
         products: produits
         users: utilisateurs
         configuration: config
+        stat_export: stats / exports
+        pages: pages
       user:
         user_information: Informations utilisateurs
         account: Compte
@@ -45,9 +47,11 @@ fr:
       new: Nouvel export
       export_created: Un nouvel export est en cours
     newsletter:
+      new: Nouvel abonné
       list_users: Liste des abonnés à la newsletter
       added: Email ajouté avec succés
       deleted: Email supprimé avec succés
+      return_list_newsletters: Retour à la liste des abonnés
     pages:
       conditions_generales_de_ventes: Conditions Générales de Ventes
       mentions_legales: Mentions légales

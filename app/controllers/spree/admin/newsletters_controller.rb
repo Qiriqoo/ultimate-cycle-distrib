@@ -2,6 +2,8 @@ module Spree
   module Admin
     class NewslettersController < Spree::Admin::ResourceController
 
+      before_action :set_newsletters_count, only: :new
+
       def index
         @search = Newsletter.search(params[:q])
         @newsletter = Newsletter.new
@@ -13,29 +15,13 @@ module Spree
         end
       end
 
-      def create
-        newsletter = Newsletter.new(newsletter_params)
-
-        if newsletter.save
-          redirect_to admin_newsletters_path, notice: Spree.t('newsletter.added')
-        else
-          redirect_to admin_newsletters_path, alert: newsletter.errors.first.join(' ')
-        end
-      end
-
-      def destroy
-        newsletter = Newsletter.find(params[:id])
-
-        if newsletter.destroy
-          redirect_to admin_newsletters_path, notice: Spree.t('newsletter.deleted')
-        else
-          redirect_to admin_newsletters_path, alert: newsletter.errors.first.join(' ')
-        end
-      end
-
       private
         def newsletter_params
           params.require(:newsletter).permit(:email)
+        end
+
+        def set_newsletters_count
+          @newsletters = Newsletter.count
         end
     end
   end

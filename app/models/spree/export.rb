@@ -4,13 +4,11 @@ class Spree::Export < ActiveRecord::Base
 
   enum status: [:in_progress, :available, :failed]
 
-  def send_export(resources)
-    AdminMailer.export(source, resources).deliver
-    self.update_attributes!(status: :available)
+  def launch_export(completed_gt = nil, completed_lt = nil)
+    ExportJob.perform_later(self, completed_gt, completed_lt)
   end
-  handle_asynchronously :send_export, queue: ->(export) { "#{export.source}-exports" }
 
-  def load_data(completed_gt, completed_lt)
+  def load_data(completed_gt = nil, completed_lt = nil)
     case source
     when 'newsletters'
       Spree::Newsletter.pluck(:email)
