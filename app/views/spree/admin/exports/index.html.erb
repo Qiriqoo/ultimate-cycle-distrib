@@ -1,15 +1,12 @@
-<%= render :partial => 'spree/admin/shared/report_sub_menu' %>
-
 <% content_for :page_title do %>
   <%= Spree.t('exports.exports') %>
 <% end %>
 
-<div class="alpha eight columns align-center">
+<div class="col-md-6 col-sm-12 col-xs-12 text-center">
   <h3>Newsletters</h3>
   <br>
-  <br>
   <% if @exports_in_progress[:newsletters].present? %>
-    <i class="fa fa-spinner fa-spin"></i>
+    <%= image_tag('loader.gif') %>
     <br>
     <%= Spree.t('exports.in_progress') %>
     <br>
@@ -34,11 +31,11 @@
 </div>
 
 
-<div class="alpha eight columns align-center">
+<div class="col-md-6 col-sm-12 col-xs-12 text-center">
   <h3>Commandes</h3>
   <br>
   <% if @exports_in_progress[:orders].present? %>
-    <i class="fa fa-spinner fa-spin"></i>
+    <%= image_tag('loader.gif') %>
     <br>
     <%= Spree.t('exports.in_progress') %>
     <br>
@@ -58,7 +55,7 @@
         <%= text_field_tag :end, nil, class: 'datepicker datepicker-to' %>
         <%= label_tag nil, Spree.t(:end), :class => 'inline' %>
       </div>
-
+      <br>
       <%= f.hidden_field :source, value: :orders %>
       <div class="form-buttons filter-actions actions" data-hook="buttons">
         <%= button Spree.t('exports.new'), 'file' %>
