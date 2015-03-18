@@ -14,7 +14,7 @@ module StockItemExtension
     end
 
     def warn_admin
-      AdminMailer.delay.warn_for_empty_stock(self)
+      AdminMailer.warn_for_empty_stock(self).deliver_later
     end
 
   end

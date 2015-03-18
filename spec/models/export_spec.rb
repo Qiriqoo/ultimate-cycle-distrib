@@ -46,7 +46,7 @@ describe Spree::Export do
       it_behaves_like 'Export data' do
         subject do
           export = Spree::Export.create!(source: :newsletters)
-          export.send_export(['test@test.fr'])
+          export.launch_export
           export
         end
       end
@@ -63,7 +63,7 @@ describe Spree::Export do
 
         subject do
           export = Spree::Export.create!(source: :orders)
-          export.send_export([order])
+          export.launch_export
           export
         end
       end

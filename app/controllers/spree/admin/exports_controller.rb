@@ -10,12 +10,9 @@ module Spree
       end
 
       def create
-
         export = Export.create!(export_params)
 
-        data = export.load_data(params[:start], params[:end])
-        export.send_export(data)
-
+        export.launch_export(params[:start], params[:end])
 
         redirect_to admin_exports_path, notice: Spree.t('exports.export_created')
       end

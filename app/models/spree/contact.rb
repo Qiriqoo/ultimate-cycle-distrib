@@ -10,7 +10,7 @@ class Spree::Contact < ActiveRecord::Base
   after_create :warn_admin
 
   def warn_admin
-    AdminMailer.delay.warn_for_new_contact(self)
+    AdminMailer.warn_for_new_contact(self).deliver_later
   end
 
 end
