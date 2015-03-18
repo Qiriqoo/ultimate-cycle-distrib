@@ -26,6 +26,8 @@ fr:
         products: produits
         users: utilisateurs
         configuration: config
+        stat_export: stats / exports
+        pages: pages
       user:
         user_information: Informations utilisateurs
         account: Compte
