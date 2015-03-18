@@ -1,5 +1,5 @@
-<footer id="footer" class="sixteen columns" data-hook>
-  <div id="footer-right" class="columns omega eight" data-hook>
+<footer id="footer" class="col-md-12" data-hook>
+  <div id="footer-right" class="col-md-6 col-sm-6 col-xs-12" data-hook>
     <h6>NEWSLETTER</h6>
     <%= form_for :newsletter, :url => newsletters_url do |f| %>
       <%= f.label :email, Spree.t(:email) %> <br>
@@ -9,7 +9,7 @@
       <%= button Spree.t('actions.subscribe'), "S'abonner" %>
     <% end %>
   </div>
-  <div id="footer-right" class="columns omega eight" data-hook>
+  <div id="footer-right" class="col-md-6 col-sm-6 col-xs-12" data-hook>
     <%= link_to Spree.t('pages.contact.contact') , new_contact_path %>
     <br>
     <%= link_to Spree.t('pages.partners_providers') , partners_path %>
