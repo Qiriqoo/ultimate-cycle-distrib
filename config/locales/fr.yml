@@ -21,6 +21,24 @@ fr:
     create_new_order: Créer une nouvelle commande
     read: Lu
     unread: Non lu
+    editing_resource: Editer
+    delete_from_taxon: Supprimer du taxon
+    back_to_resource_list: Retour à la liste des statistiques
+    promotion_uses: Nombre d'utilisations
+    advertise: Promotion visible
+    order_number: Numéro de commande
+    find_a_taxon: Chercher un taxon
+    choose_location: Choisir la localisation
+    summary: Résumé
+    add_coupon_code: Ajouter un code promo
+    total_price: Prix total
+    order_line_items: Liste des produits
+    line_item_adjustments: Taxes / Remises
+    tax_code: Code de Taxe
+    reference_contains: Référence
+    back_to_stock_locations_list: Retour à la liste des stocks
+    backorderable_default: Livraison différé
+    propagate_all_variants: Propager toutes les variantes
     admin:
       tab:
         products: produits
@@ -34,6 +52,9 @@ fr:
         addresses: Adresses
         orders: Commandes
         items: Produits
+        order_history: Historique des commandes
+        items_purchased: Produit(s) acheté(s)
+        order_num: Numéro de commande
     actions:
       add: Ajouter
       subscribe: S'abonner
@@ -76,3 +97,5 @@ fr:
         contact: Contact
         return_list_contacts: Retour à la liste des contacts
         added: Votre message à bien été enregistré
+    shipment_states:
+      canceled: Annulé
