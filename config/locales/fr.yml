@@ -39,6 +39,8 @@ fr:
     back_to_stock_locations_list: Retour à la liste des stocks
     backorderable_default: Livraison différé
     propagate_all_variants: Propager toutes les variantes
+    quick_search: Recherche rapide
+    filter: Filtre
     admin:
       tab:
         products: produits
@@ -73,6 +75,23 @@ fr:
       added: Email ajouté avec succés
       deleted: Email supprimé avec succés
       return_list_newsletters: Retour à la liste des abonnés
+    orders:
+      export_column_names:
+        number: Numéro de la commande
+        items_name: Nom des produits
+        item_count: Nombre total de produits
+        item_total: Valeur total des produits
+        adjustment_total: Valeur totals des remises/taxes des produits
+        total: Valeur final des produits
+        promo_total: Prix total des promotions
+        shipping_method_name: Méthode de livraison
+        shipment_total: Prix total de la livraison
+        payment_total: Prix total de la commande
+        email: Email
+        bill_address_name: Nom pour la facturation
+        bill_address_location: Adresse de facturation
+        ship_address_name: Nom pour la livraison
+        ship_address_location: Adresse de livraison
     pages:
       conditions_generales_de_ventes: Conditions Générales de Ventes
       mentions_legales: Mentions légales
