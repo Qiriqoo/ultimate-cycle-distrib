@@ -9,6 +9,7 @@ gem 'delayed_job_active_record'
 gem 'axlsx_rails'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk', '< 2.0'
+gem 'prawn-rails'
 
 #JS
 gem 'uglifier', '>= 1.3.0'
