@@ -1,11 +1,9 @@
-<footer id="footer" class="col-md-12" data-hook>
-  <div id="footer-right" class="col-md-6 col-sm-6 col-xs-12" data-hook>
-    <h6>NEWSLETTER</h6>
-    <%= form_for :newsletter, :url => newsletters_url do |f| %>
-      <%= f.label :email, Spree.t(:email) %> <br>
-      <%= f.text_field :email, :class => 'fullwidth' %>
-      <br>
-      <br>
+<footer id="spree-footer" class="col-md-12" data-hook>
+  <div id="footer-left" class="col-md-6 col-sm-6 col-xs-12" data-hook>
+    <strong>NEWSLETTER:</strong>
+    <%= form_for :newsletter, :url => newsletters_url, :html => {class: "form-inline"} do |f| %>
+      <%= f.label :email, Spree.t(:email) %>
+      <%= f.text_field :email, :class => 'form-control' %>
       <%= button Spree.t('actions.subscribe'), "S'abonner" %>
     <% end %>
   </div>
