@@ -4,8 +4,8 @@ development:
   database: ultimate_cycle_development
   pool: 5
   host: localhost
-  username: sdiallo
-  password: sdiallo88
+  username: ideesbebe
+  password: sefsef
 
 test:
   adapter: postgresql
@@ -13,8 +13,8 @@ test:
   database: ultimate_cycle_test
   host: localhost
   pool: 5
-  username: sdiallo
-  password: sdiallo88
+  username: ideesbebe
+  password: sefsef
 
 production:
   adapter: postgresql
@@ -22,5 +22,5 @@ production:
   database: ultimate_cycle_production
   host: localhost
   pool: 5
-  username: sdiallo
-  password: sdiallo88
+  username: ideesbebe
+  password: sefsef
