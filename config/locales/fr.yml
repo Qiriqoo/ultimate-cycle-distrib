@@ -118,3 +118,13 @@ fr:
         added: Votre message à bien été enregistré
     shipment_states:
       canceled: Annulé
+    promotion_rule_types:
+      weight_total:
+        name: Poids total
+        description: Poids total de la commande
+    eligibility_errors:
+      messages:
+        weight_total_more_than: Cette promotion n'est pas applicable sur une commande supérieur à %{weight}kg
+        weight_total_less_than: Cette promotion n'est pas applicable sur une commande inférieur à %{weight}kg
+        weight_total_more_than_or_equal: Cette promotion n'est pas applicable sur une commande supérieur ou égale à %{weight}kg
+        weight_total_less_than_or_equal: Cette promotion n'est pas applicable sur une commande inférieur ou égale à %{weight}kg
