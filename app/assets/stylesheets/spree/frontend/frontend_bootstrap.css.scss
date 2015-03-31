@@ -3,9 +3,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 // -- Spree Custom Header and Footer ---------------------
 #spree-header {
-  background: #000;
+  background: $gray-dark;
   background-size: cover;
   margin-bottom: $line-height-computed;
 
@@ -14,16 +15,17 @@
     padding: $line-height-computed 0;
   }
 
-  #logo {
+  #header {
+    background-image: image-url('header-bg.jpg');
   }
 
   .nav a {
-    color: black;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
 
     &:hover, &:focus {
-      color: #C56728;
+      color: lighten(#C56728, 10);
     }
   }
 
@@ -54,6 +56,14 @@
     color: lighten(#C56728, 5);
   }
 
+}
+
+#main-search-bar {
+  #keywords.form-control {
+    &:focus {
+      border-color: #C56728;
+    }
+  }
 }
 
 #footer-right {

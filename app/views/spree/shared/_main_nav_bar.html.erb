@@ -2,7 +2,6 @@
 <nav class="col-md-12">
   <div id="main-nav-bar" class="navbar">
     <ul class="nav navbar-nav" data-hook>
-      <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
       <% get_taxonomies.each do |taxonomy| %>
         <% cache [I18n.locale, taxonomy, max_level] do %>
           <li><%= link_to  Spree.t(taxonomy.name), seo_url(taxonomy.root) %></li>
