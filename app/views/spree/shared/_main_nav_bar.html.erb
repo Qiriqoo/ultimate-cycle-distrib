@@ -4,7 +4,7 @@
     <ul class="nav navbar-nav" data-hook>
       <% get_taxonomies.each do |taxonomy| %>
         <% cache [I18n.locale, taxonomy, max_level] do %>
-          <li><%= link_to  Spree.t(taxonomy.name), seo_url(taxonomy.root) %></li>
+          <li><%= link_to  taxonomy.name, seo_url(taxonomy.root) %></li>
         <% end %>
       <% end %>
     </ul>

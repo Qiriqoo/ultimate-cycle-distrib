@@ -8,7 +8,6 @@
 #spree-header {
   background: $gray-dark;
   background-size: cover;
-  margin-bottom: $line-height-computed;
 
   #header {
     background: #F5F5F5;
@@ -36,6 +35,13 @@
 }
 .nav > li > a:hover {
   background: none;
+}
+
+#header {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .btn-ucd {
@@ -79,7 +85,6 @@
   background: $gray-dark;
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-top: 40px;
   color: white;
 }
 
@@ -92,6 +97,39 @@
   font-weight: lighter;
   font-size: 12px;
 }
+
+#main-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #F5F5F5;
+}
+
+ol.breadcrumb {
+  background: none;
+}
+
+#taxonomies {
+
+  a.active {
+    border-color: #C56728;
+    background-color: #C56728;
+  }
+
+  a:hover {
+    border-color: #C56728;
+    background-color: #C56728;
+    color: white;
+  }
+
+}
+
+#sidebar_products_search {
+  input[type="submit"] {
+    border-color: #C56728;
+    background-color: #C56728;
+  }
+}
+
 
 
 // -- Spree Layout Custom Rules -------------------------
