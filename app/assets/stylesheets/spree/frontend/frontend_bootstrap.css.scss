@@ -3,27 +3,28 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 // -- Spree Custom Header and Footer ---------------------
 #spree-header {
-  background: #000;
+  background: $gray-dark;
   background-size: cover;
-  margin-bottom: $line-height-computed;
 
   #header {
     background: #F5F5F5;
     padding: $line-height-computed 0;
   }
 
-  #logo {
+  #header {
+    background-image: image-url('header-bg.jpg');
   }
 
   .nav a {
-    color: black;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
 
     &:hover, &:focus {
-      color: #C56728;
+      color: lighten(#C56728, 10);
     }
   }
 
@@ -36,18 +37,100 @@
   background: none;
 }
 
+#header {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .btn-ucd {
   background-color: #C56728;
   color: white;
   border-color: #C56728;
+
+  &:hover {
+    background: lighten(#C56728, 5);
+    border-color: #C56728;
+    color: white;
+  }
+}
+
+.link-ucd {
+  color: #C56728;
+  &:hover {
+    color: lighten(#C56728, 5);
+  }
+
+}
+
+#main-search-bar {
+  #keywords.form-control {
+    &:focus {
+      border-color: #C56728;
+    }
+  }
+}
+
+#footer-right {
+  text-align: center;
+  padding-top: 45px;
+}
+
+#footer-right > .link-ucd {
+  margin: 0 10px;
 }
 
 #spree-footer {
   background: $gray-dark;
-  padding-top: $padding-base-horizontal;
-  margin-top: $line-height-computed;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: white;
 }
+
+#footer-left > form {
+  margin-top: 10px;
+}
+
+.newsletter-text {
+  color: #C56728;
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+#main-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #F5F5F5;
+}
+
+ol.breadcrumb {
+  background: none;
+}
+
+#taxonomies {
+
+  a.active {
+    border-color: #C56728;
+    background-color: #C56728;
+  }
+
+  a:hover {
+    border-color: #C56728;
+    background-color: #C56728;
+    color: white;
+  }
+
+}
+
+#sidebar_products_search {
+  input[type="submit"] {
+    border-color: #C56728;
+    background-color: #C56728;
+  }
+}
+
+
 
 // -- Spree Layout Custom Rules -------------------------
 
@@ -84,14 +167,6 @@ table {
   }
 }
 
-// Footer links
-#footer-left a {
-  color: lighten($brand-primary, 20);
-
-  &:hover {
-    color: lighten($brand-primary, 10);
-  }
-}
 
 // Updated credit-card image
 #credit-card-image {

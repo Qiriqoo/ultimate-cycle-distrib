@@ -41,6 +41,8 @@ fr:
     propagate_all_variants: Propager toutes les variantes
     quick_search: Recherche rapide
     filter: Filtre
+    shop_by_taxonomy: '%{taxonomy}'
+    shipment_details: Details de livraison
     admin:
       tab:
         products: produits

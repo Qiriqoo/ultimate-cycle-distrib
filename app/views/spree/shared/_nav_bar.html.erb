@@ -1,7 +1,7 @@
 <nav class="navbar col-md-12" id="top-nav-bar">
   <ul id="nav-bar" class="nav navbar-nav navbar-right" data-hook>
-    <li id="search-bar" data-hook>
-    </li>
+    <%= render :partial => 'spree/shared/login_bar' %>
+    <br>
     <li id="link-to-cart" data-hook>
       <noscript>
         <%= link_to Spree.t(:cart), '/cart' %>
