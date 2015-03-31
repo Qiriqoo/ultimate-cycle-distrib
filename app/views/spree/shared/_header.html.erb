@@ -1,0 +1,18 @@
+<div id="spree-header">
+  <header id="header" data-hook>
+      <div class="row">
+        <div class="col-md-5">
+          <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %> 
+        </div>
+        <figure id="logo" class="col-md-2 text-center" data-hook>
+          <%= image_tag "Ultimate-Cycle-Distribution-logo-small.png" %>
+        </figure>
+        <div class="col-md-5">
+          <%= render :partial => 'spree/shared/nav_bar' %>
+        </div>
+      </div>
+  </header>
+  <div class="container text-center">
+    <%= render :partial => 'spree/shared/search' %>
+  </div>
+</div>
