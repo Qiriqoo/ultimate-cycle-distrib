@@ -55,6 +55,10 @@ module OrderExtension
       values
     end
 
+    def weight_total
+      variants.pluck(:weight).sum
+    end
+
   end
 end
 

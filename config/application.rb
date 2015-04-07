@@ -33,7 +33,7 @@ module UltimateCycle
 
 
     config.after_initialize do
-      config.spree.promotions.rules = [Spree::Promotion::Rules::ItemTotal, Spree::Promotion::Rules::Product, Spree::Promotion::Rules::User]
+      config.spree.promotions.rules = [Spree::Promotion::Rules::ItemTotal, Spree::Promotion::Rules::WeightTotal, Spree::Promotion::Rules::Product, Spree::Promotion::Rules::User]
     end
 
     config.active_job.queue_adapter = :delayed_job
