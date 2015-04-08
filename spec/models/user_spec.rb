@@ -35,6 +35,11 @@ describe Spree::User do
       expect(admin.active).to eq(true)
     end
 
+    it 'genrates an api key' do
+      admin.save!
+      expect(admin.spree_api_key).to_not be_nil
+    end
+
     it 'has the admin role' do
       admin.save!
       expect(admin.spree_roles.map(&:name)).to include('admin')
