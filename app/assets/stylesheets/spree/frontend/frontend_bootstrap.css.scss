@@ -8,6 +8,7 @@
 #spree-header {
   background: $gray-dark !important;
   background-size: cover !important;
+  margin-bottom: 0 !important;
 
   #header {
     padding: $line-height-computed 0 !important;
@@ -87,6 +88,7 @@
   padding-top: 30px !important;
   padding-bottom: 30px !important;
   color: white !important;
+  margin-top: 0 !important;
 }
 
 #footer-left > form {
@@ -103,6 +105,7 @@
   padding-top: 20px !important;
   padding-bottom: 40px !important;
   background: #F5F5F5 !important;
+  min-height: 400px !important;
 }
 
 ol.breadcrumb {
