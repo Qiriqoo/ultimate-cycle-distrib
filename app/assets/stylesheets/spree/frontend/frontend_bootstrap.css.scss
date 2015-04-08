@@ -10,11 +10,7 @@
   background-size: cover;
 
   #header {
-    background: #F5F5F5;
     padding: $line-height-computed 0;
-  }
-
-  #header {
     background-image: image-url('header-bg.jpg');
   }
 
@@ -65,6 +61,7 @@
 }
 
 #main-search-bar {
+  background: red;
   #keywords.form-control {
     &:focus {
       border-color: #C56728;
