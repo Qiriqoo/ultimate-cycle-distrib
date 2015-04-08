@@ -6,12 +6,12 @@
 
 // -- Spree Custom Header and Footer ---------------------
 #spree-header {
-  background: $gray-dark !important;
+  background: $gray-dark;
   background-size: cover !important;
 
   #header {
     padding: $line-height-computed 0 !important;
-    background-image: image-url('header-bg.jpg') !important;
+    background-image: asset-url('header-bg.jpg') !important;
   }
 
   .nav a {
