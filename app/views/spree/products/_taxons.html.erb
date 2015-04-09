@@ -1,0 +1,16 @@
+<div id="taxon-crumbs" data-hook class=" five ">
+  <h3 class="product-section-title"><%= Spree.t(:look_for_similar_items) %></h3>
+  <div data-hook="product_taxons">
+    <div id='cross-products' class='col-md-12 col-sm-12'>
+      <% @cross_products.each do |product| %>
+        <div class='col-md-4 col-sm-12 cross-product'>
+          <%= link_to product_path(product) do %>
+            <%= image_tag product.image_path('mini') %>
+            <br>
+            <span><%= product.name %></span>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
