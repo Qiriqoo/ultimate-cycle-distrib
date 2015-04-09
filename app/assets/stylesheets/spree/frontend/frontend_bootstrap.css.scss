@@ -111,6 +111,13 @@
 ol.breadcrumb {
   background: none !important;
   margin-bottom: 0 !important;
+
+  a {
+    color: #C56728;
+    &:hover {
+      color: #C56728;
+    }
+  }
 }
 
 #taxonomies {
@@ -208,5 +215,31 @@ body {
   .info {
     color: #C56728 !important;
     font-size: 20px !important;
+  }
+}
+
+#cross-products {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.cross-product {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  img {
+    width: 100%;
+  }
+
+  span {
+    margin-top: 10px;
+  }
+
+  a {
+    color: #C56728;
+    &:hover {
+      color: #C56728;
+    }
   }
 }
