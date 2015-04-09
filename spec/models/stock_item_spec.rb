@@ -7,10 +7,6 @@ describe Spree::StockItem do
     let(:stock_location) { FactoryGirl.create(:stock_location_with_items) }
     subject { stock_location.stock_items.order(:id).first }
 
-    before(:all) do
-      FactoryGirl.create(:admin_user)
-    end
-
     context 'when there are still items' do
       it 'does not send an email to warn the administrators' do
         expect{
