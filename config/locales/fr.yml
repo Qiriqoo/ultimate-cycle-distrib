@@ -5,6 +5,12 @@ fr:
       first: Première page
       next: Suivant
       last: Dernière page
+  admin_mailer:
+    warn_for_new_user: Un nouvel utilisateur viens de s'inscrire
+    warn_for_new_admin: Un nouvel administrateur est inscrit
+    warn_for_new_contact: Un nouveau contact à été enregistré
+    warn_for_empty_stock: "Le stock de produit pour %{name} est désormais vide"
+    export: "Export de vos %{source} - %{date}"
   spree:
     email: Email
     administrator: Administrateur

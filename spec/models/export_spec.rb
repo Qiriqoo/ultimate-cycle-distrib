@@ -2,10 +2,6 @@ require 'rails_helper'
 
 describe Spree::Export do
 
-  before(:all) do
-    FactoryGirl.create(:admin_user)
-  end
-
   describe 'when creates' do
 
     shared_examples 'Export data' do
