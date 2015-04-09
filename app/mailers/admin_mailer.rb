@@ -10,28 +10,29 @@ class AdminMailer < Spree::BaseMailer
 
   def warn_for_new_user(user)
     @user = user
-    @subject = "Un nouvel utilisateur viens de s'inscrire"
+    role = user.has_spree_role?('admin') ? 'admin' : 'user'
+    @subject = I18n.t("admin_mailer.warn_for_new_#{role}")
 
     mail(subject: @subject)
   end
 
   def warn_for_new_contact(contact)
     @contact = contact
-    @subject = 'Un nouveau contact à été enregistré'
+    @subject = I18n.t("admin_mailer.warn_for_new_contact")
 
     mail(subject: @subject)
   end
 
   def warn_for_empty_stock(stock_item)
     @stock_item = stock_item
-    @subject = "Le stock de produit pour #{stock_item.variant_name} est désormais vide"
+    @subject = I18n.t("admin_mailer.warn_for_empty_stock", name: stock_item.variant_name)
 
     mail(subject: @subject)
   end
 
   def export(source, resources)
     @resources = resources
-    @subject = "Export de vos #{source.capitalize} - #{Date.today.to_s}"
+    @subject = I18n.t("admin_mailer.export", source: source.capitalize, date: Date.today.to_s)
 
     xlsx = render_to_string(handlers: [:axlsx], formats: [:xlsx], template: "exports/#{source}", layout: false)
     attachments["#{source}-#{Date.today.to_s}.xlsx"] = {mime_type: Mime::XLSX, content: xlsx}

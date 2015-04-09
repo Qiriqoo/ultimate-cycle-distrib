@@ -30,9 +30,9 @@ describe Spree::User do
   context 'when creates an admin' do
     let(:admin) { FactoryGirl.build(:admin_user) }
 
-    it 'is active by default' do
+    it 'is inactive by default' do
       admin.save!
-      expect(admin.active).to eq(true)
+      expect(admin.active).to eq(false)
     end
 
     it 'genrates an api key' do
@@ -45,11 +45,11 @@ describe Spree::User do
       expect(admin.spree_roles.map(&:name)).to include('admin')
     end
 
-    it 'does not send an email to warn the administrators' do
+    it 'sends an email to warn the administrators' do
       expect{
         admin.save!
         Delayed::Worker.new.work_off
-      }.to change{deliveries_with_subject("Un nouvel utilisateur viens de s'inscrire").count}.by 0
+      }.to change{deliveries_with_subject("Un nouvel administrateur est inscrit").count}.by 1
     end
   end
 end
