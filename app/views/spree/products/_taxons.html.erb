@@ -5,7 +5,7 @@
       <% @cross_products.each do |product| %>
         <div class='col-md-4 col-sm-12 cross-product'>
           <%= link_to product_path(product) do %>
-            <%= product_image(@product, itemprop: "image") %>
+            <%= product_image(product, itemprop: "image") %>
             <br>
             <span><%= product.name %></span>
           <% end %>
