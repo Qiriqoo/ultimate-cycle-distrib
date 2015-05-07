@@ -1,0 +1,27 @@
+<% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
+
+<h1 class="taxon-title text-center"><%= @taxon.name %></h1>
+
+<% content_for :sidebar do %>
+  <div data-hook="taxon_sidebar_navigation">
+    <% if not @searcher.nil? || @searcher.properties[:taxon].nil? %>
+      <div class="sub_menu" id="front-sub-menu">
+        <%= custom_taxons_tree(@searcher.properties[:taxon].root, @searcher.properties[:taxon], max_level) %>
+      </div>
+    <% end %>
+
+  </div>
+<% end %> 
+
+<% if @taxon.leaf? %>
+  <div data-hook="taxon_products">
+    <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
+  </div>
+<% end %>
+<% unless params[:keywords].present? %>
+  <div data-hook="taxon_children">
+    <% cache [I18n.locale, @taxon] do %>
+      <%= render partial: 'taxon', collection: @taxon.children %>
+    <% end %>
+  </div>
+<% end %>

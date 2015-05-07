@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/spree-contrib/spree_i18n.git
-  revision: 8552d68328c6eb7cf56821222213568e2caf1d97
+  revision: 0fda0166201f7cb441d5f7b66d8883899d20ecb6
   branch: 3-0-stable
   specs:
     spree_i18n (3.0.0)
@@ -8,11 +8,11 @@ GIT
       globalize (~> 5.0.1)
       i18n_data (~> 0.5.1)
       rails-i18n (~> 4.0.1)
-      spree_core (~> 3.0.0.beta)
+      spree_core (~> 3.0.0)
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: cfa72b4b0fedbca2c6ed04c6e165dd34f59d407c
+  revision: 84135220e22313dc544c73395af1509bf41e6a7e
   branch: 3-0-stable
   specs:
     spree (3.0.0)
@@ -37,7 +37,7 @@ GIT
     spree_cmd (3.0.0)
       thor (~> 0.14)
     spree_core (3.0.0)
-      activemerchant (~> 1.46.0)
+      activemerchant (~> 1.47.0)
       acts_as_list (~> 0.6)
       awesome_nested_set (~> 3.0.1)
       cancancan (~> 1.10.1)
@@ -73,7 +73,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_auth_devise.git
-  revision: 07f16255c8e83cf5763f2c3510444ee1b4cdc4dd
+  revision: 347428395b8c06c79c3bfe516404314a1c365839
   branch: 3-0-stable
   specs:
     spree_auth_devise (3.0.0)
@@ -81,7 +81,7 @@ GIT
       devise-encryptable (= 0.1.2)
       json
       multi_json
-      spree_core (~> 3.0.0.beta)
+      spree_core (~> 3.0.0)
 
 GIT
   remote: git://github.com/spree/spree_editor.git
@@ -95,11 +95,11 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_gateway.git
-  revision: d9305a348d259df0ffcb2a81ef79823b637539bc
+  revision: 898061cea1b18b9e63cde0224921225e4c57dd65
   branch: 3-0-stable
   specs:
     spree_gateway (3.0.0.beta)
-      spree_core (~> 3.0.0.beta)
+      spree_core (~> 3.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -126,7 +126,7 @@ GEM
     activejob (4.2.0)
       activesupport (= 4.2.0)
       globalid (>= 0.3.0)
-    activemerchant (1.46.0)
+    activemerchant (1.47.0)
       activesupport (>= 3.2.14, < 5.0.0)
       builder (>= 2.1.2, < 4.0.0)
       i18n (>= 0.6.9)
@@ -146,9 +146,9 @@ GEM
       tzinfo (~> 1.1)
     acts_as_list (0.6.0)
       activerecord (>= 3.0)
-    addressable (2.3.7)
+    addressable (2.3.8)
     arel (6.0.0)
-    autoprefixer-rails (5.1.7.1)
+    autoprefixer-rails (5.1.8)
       execjs
       json
     awesome_nested_set (3.0.2)
@@ -179,7 +179,7 @@ GEM
       uniform_notifier (>= 1.6.0)
     camertron-eprun (1.1.0)
     cancancan (1.10.1)
-    canonical-rails (0.0.8)
+    canonical-rails (0.0.9)
       rails (>= 3.1, < 5.0)
     carmen (1.0.2)
       activesupport (>= 3.0.0)
