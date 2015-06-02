@@ -17,7 +17,7 @@ module OrderExtension
     def export_column_names
       names = []
       export_columns.each do |column|
-        names.push(Spree.t("orders.export_column_names.#{column}"))
+        names.push(Spree.t("orders_export_column_names.#{column}"))
       end
       names
     end
