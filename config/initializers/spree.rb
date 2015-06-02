@@ -27,4 +27,6 @@ rails_config.promotions.actions = [Spree::Promotion::Actions::CreateAdjustment]
 rails_config.calculators.promotion_actions_create_adjustments = [Spree::Calculator::FlatPercentItemTotal, Spree::Calculator::FlatRate]
 rails_config.calculators.shipping_methods = [Spree::Calculator::Shipping::FlatRate]
 
+rails_config.stock_splitters = []
+
 Spree::PermittedAttributes.user_attributes.push(:active)
