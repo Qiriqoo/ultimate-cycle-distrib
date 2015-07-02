@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2'
+gem 'rails', '4.2.2'
 gem 'pg'
 gem 'unicorn'
 gem 'delayed_job_active_record'
