@@ -113,6 +113,8 @@ fr:
       bill_address_location: Adresse de facturation
       ship_address_name: Nom pour la livraison
       ship_address_location: Adresse de livraison
+    print_invoice:
+      payment_via: Paiement via
     pages:
       conditions_generales_de_ventes: Conditions Générales de Ventes
       mentions_legales: Mentions légales

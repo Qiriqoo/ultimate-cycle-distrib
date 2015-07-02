@@ -98,16 +98,6 @@ prawn_document do |pdf|
   # Payments
   total_payments = 0.0
   @order.payments.each do |payment|
-    totals << [
-      pdf.make_cell(
-        content: Spree.t(:payment_via,
-        gateway: (payment.source_type || Spree.t(:unprocessed, scope: :print_invoice)),
-        number: payment.number,
-        date: I18n.l(payment.updated_at.to_date, format: :long),
-        scope: :print_invoice)
-      ),
-      payment.display_amount.to_s
-    ]
     total_payments += payment.amount
   end
 
