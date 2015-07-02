@@ -4,6 +4,7 @@ gem 'rails', '4.2'
 gem 'pg'
 gem 'unicorn'
 gem 'delayed_job_active_record'
+gem 'rails_12factor', group: :production
 
 #ASSETS
 gem 'axlsx_rails'
@@ -28,6 +29,8 @@ gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '3-0-stable'
 gem 'spree_editor', github: 'spree/spree_editor', branch: '3-0-stable'
+
+gem 'braintree'
 
 #ANALYTICS
 gem 'newrelic_rpm'

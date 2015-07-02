@@ -11,9 +11,9 @@ prawn_document do |pdf|
   end
 
   pdf.font @font_face, size: @font_size
-  pdf.text Spree.t('orders.export_column_names.invoice'), align: :right, style: :bold, size: 18
+  pdf.text Spree.t('orders_export_column_names.invoice'), align: :right, style: :bold, size: 18
   pdf.move_down 4
-  pdf.text Spree.t('orders.export_column_names.order_number', number: @order.number), align: :right
+  pdf.text Spree.t('orders_export_column_names.order_number', number: @order.number), align: :right
   pdf.move_down 2
   pdf.text I18n.l(@order.completed_at.to_date), align: :right
 
@@ -42,7 +42,7 @@ prawn_document do |pdf|
   shipping << "\n#{ship_address.city}, #{ship_address.state_text} #{ship_address.zipcode}"
   shipping << "\n#{ship_address.country.name}"
   shipping << "\n#{ship_address.phone}"
-  shipping << "\n\n#{Spree.t('orders.export_column_names.via')} #{@order.shipments.first.shipping_method.name}"
+  shipping << "\n\n#{Spree.t('orders_export_column_names.via')} #{@order.shipments.first.shipping_method.name}"
 
   data = [[address_cell_billing, address_cell_shipping], [billing, shipping]]
   pdf.table(data, position: :center)

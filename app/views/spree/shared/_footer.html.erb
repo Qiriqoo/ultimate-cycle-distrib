@@ -1,22 +1,18 @@
-<footer id="footer" class="col-md-12" data-hook>
-  <div id="footer-right" class="col-md-6 col-sm-6 col-xs-12" data-hook>
-    <h6>NEWSLETTER</h6>
-    <%= form_for :newsletter, :url => newsletters_url do |f| %>
-      <%= f.label :email, Spree.t(:email) %> <br>
-      <%= f.text_field :email, :class => 'fullwidth' %>
-      <br>
-      <br>
-      <%= button Spree.t('actions.subscribe'), "S'abonner" %>
+<footer id="spree-footer" class="col-md-12 col-sm-12 col-xs-12" data-hook>
+  <div id="footer-left" class="col-md-5 col-sm-5 col-xs-12" data-hook>
+    <strong>NEWSLETTER :</strong>
+    <%= form_for :newsletter, url: newsletters_url, html: {class: "form-inline"} do |f| %>
+      <%= f.text_field :email, class: 'form-control', placeholder: 'Email' %>
+      <%= button Spree.t('actions.subscribe'), "S'abonner", 'submit', { class: 'btn-ucd' } %>
     <% end %>
+    <br>
+    <span class='newsletter-text'>Abonnez-vous à la newsletter pour recevoir des informations concernant Ultimate Cycle Distribution</span>
   </div>
-  <div id="footer-right" class="col-md-6 col-sm-6 col-xs-12" data-hook>
-    <%= link_to Spree.t('pages.contact.contact') , new_contact_path %>
-    <br>
-    <%= link_to Spree.t('pages.partners_providers') , partners_path %>
-    <br>
+  <div id="footer-right" class="col-md-7 col-sm-7 col-xs-12" data-hook>
+    <%= link_to Spree.t('pages.partners_providers') , partners_path, class: 'link-ucd' %>
     <% Spree::Page.order('created_at DESC').each do |page| %>
-      <%= link_to Spree.t("pages.#{page.name.parameterize.underscore}"), page_path(page.slug) %>
-      <br>
+      <%= link_to Spree.t("pages.#{page.name.parameterize.underscore}"), page_path(page.slug), class: 'link-ucd' %>
     <% end %>
+    <%= link_to Spree.t('pages.contact.contact') , new_contact_path, class: 'link-ucd' %>
   </div>
 </footer>

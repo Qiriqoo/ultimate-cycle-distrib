@@ -13,7 +13,7 @@
       respond_to do |format|
         format.html
         format.pdf do
-          @filename = Spree.t('orders.invoice_filename', number: @order.number, date: @order.completed_at.to_date)
+          @filename = Spree.t('invoice_filename', number: @order.number, date: @order.completed_at.to_date)
         end
       end
     end

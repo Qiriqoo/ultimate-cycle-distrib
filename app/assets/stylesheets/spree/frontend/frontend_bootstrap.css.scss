@@ -1,0 +1,245 @@
+//Add your custom bootstrap variables here, see https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss for full list of variables.
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+// -- Spree Custom Header and Footer ---------------------
+#spree-header {
+  background: $gray-dark !important;
+  background-size: cover !important;
+  margin-bottom: 0 !important;
+
+  #header {
+    padding: $line-height-computed 0 !important;
+    background-image: asset-url('header-bg.jpg') !important;
+
+    .row {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    #logo {
+      img {
+        width: 150px !important;
+      }
+    }
+  }
+
+  .nav a {
+    color: white !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+
+    &:hover, &:focus {
+      color: lighten(#C56728, 10) !important;
+    }
+  }
+
+  .navbar {
+    border: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+.nav > li > a:hover {
+  background: none !important;
+}
+
+
+.btn-ucd {
+  background-color: #C56728 !important;
+  color: white !important;
+  border-color: #C56728 !important;
+
+  &:hover {
+    background: lighten(#C56728, 5) !important;
+    border-color: #C56728 !important;
+    color: white !important;
+  }
+}
+
+.link-ucd {
+  color: #C56728 !important;
+  &:hover {
+    color: lighten(#C56728, 5) !important;
+  }
+
+}
+
+#main-search-bar {
+  #keywords.form-control {
+    &:focus {
+      border-color: #C56728 !important;
+    }
+  }
+}
+
+#footer-right {
+  text-align: center !important;
+  padding-top: 45px !important;
+}
+
+#footer-right > .link-ucd {
+  margin: 0 10px !important;
+}
+
+#spree-footer {
+  background: $gray-dark !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  color: white !important;
+  margin-top: 0 !important;
+}
+
+#footer-left > form {
+  margin-top: 10px !important;
+}
+
+.newsletter-text {
+  color: #C56728 !important;
+  font-weight: lighter !important;
+  font-size: 12px !important;
+}
+
+#main-content {
+  padding-top: 20px !important;
+  padding-bottom: 40px !important;
+  background: #F5F5F5 !important;
+  min-height: 400px !important;
+}
+
+ol.breadcrumb {
+  background: none !important;
+  margin-bottom: 0 !important;
+
+  a {
+    color: #C56728;
+    &:hover {
+      color: #C56728;
+    }
+  }
+}
+
+#taxonomies {
+
+  a.active {
+    border-color: #C56728 !important;
+    background-color: #C56728 !important;
+  }
+
+  a:hover {
+    border-color: #C56728 !important;
+    background-color: #C56728 !important;
+    color: white !important;
+  }
+
+}
+
+#sidebar_products_search {
+  input[type="submit"] {
+    border-color: #C56728 !important;
+    background-color: #C56728 !important;
+  }
+}
+
+
+
+// -- Spree Layout Custom Rules -------------------------
+
+.alert-notice { @extend .alert-success; }
+.alert-error, .alert-registration_error { @extend .alert-danger; }
+.alert-alert { @extend .alert-info; }
+
+.progress-steps {
+  margin-top: $line-height-computed !important;
+}
+
+h1 {
+  margin-bottom: 30px !important;
+}
+
+// Center cart line items
+table {
+  &.table > tbody > tr {
+    &.line-item td, &.stock-item td {
+      vertical-align: middle !important;
+    }
+  }
+
+  &#line-items {
+    > tbody, > tfoot {
+      > tr > td {
+        vertical-align: middle !important;
+
+        &.order-qty {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}
+
+
+// Updated credit-card image
+#credit-card-image {
+  margin-top: -10px !important;
+}
+
+.existing-credit-card-list td {
+  padding: 5px !important;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+// products pages
+#products {
+  .panel-body {
+    padding: 0 !important;
+  }
+  .product-body {
+    height: 250px !important;
+    img {
+      height: 250px !important;
+      width: 100% !important;
+      display: block !important;
+    }
+  }
+
+  #product-images {
+    img {
+      width: 100%
+    }
+  }
+  .info {
+    color: #C56728 !important;
+    font-size: 20px !important;
+  }
+}
+
+#cross-products {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.cross-product {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  img {
+    width: 100%;
+  }
+
+  span {
+    margin-top: 10px;
+  }
+
+  a {
+    color: #C56728;
+    &:hover {
+      color: #C56728;
+    }
+  }
+}

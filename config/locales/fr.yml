@@ -5,6 +5,12 @@ fr:
       first: Première page
       next: Suivant
       last: Dernière page
+  admin_mailer:
+    warn_for_new_user: Un nouvel utilisateur viens de s'inscrire
+    warn_for_new_admin: Un nouvel administrateur est inscrit
+    warn_for_new_contact: Un nouveau contact à été enregistré
+    warn_for_empty_stock: "Le stock de produit pour %{name} est désormais vide"
+    export: "Export de vos %{source} - %{date}"
   spree:
     email: Email
     administrator: Administrateur
@@ -23,7 +29,7 @@ fr:
     unread: Non lu
     editing_resource: Editer
     delete_from_taxon: Supprimer du taxon
-    back_to_resource_list: Retour à la liste des statistiques
+    back_to_resource_list: Retour à la liste compléte
     promotion_uses: Nombre d'utilisations
     advertise: Promotion visible
     order_number: Numéro de commande
@@ -41,6 +47,12 @@ fr:
     propagate_all_variants: Propager toutes les variantes
     quick_search: Recherche rapide
     filter: Filtre
+    shop_by_taxonomy: '%{taxonomy}'
+    shipment_details: Details de livraison
+    use_new_cc_or_payment_method: Utiliser une nouvelle carte
+    use_existing_cc: Utiliser la carte existante
+    shipping_total: Total de la livraison
+    pending: En attente
     admin:
       tab:
         products: produits
@@ -75,33 +87,32 @@ fr:
       added: Email ajouté avec succés
       deleted: Email supprimé avec succés
       return_list_newsletters: Retour à la liste des abonnés
-    orders:
-      invoice_filename: 'Facture-%{number}-%{date}.pdf'
-      invoice_column_names:
-        product_name: Nom du produit
-        quantity: Quantité
-        adjustment: Remise
-        price: Prix
-        unit_price: Prix unitaire
-      export_column_names:
-        invoice: Facture
-        via: Via
-        number: Numéro de la commande
-        order_number: 'Numéro de la commande #%{number}'
-        items_name: Nom des produits
-        item_count: Nombre total de produits
-        item_total: Valeur total des produits
-        adjustment_total: Valeur totals des remises/taxes des produits
-        total: Valeur final des produits
-        promo_total: Prix total des promotions
-        shipping_method_name: Méthode de livraison
-        shipment_total: Prix total de la livraison
-        payment_total: Prix total de la commande
-        email: Email
-        bill_address_name: Nom pour la facturation
-        bill_address_location: Adresse de facturation
-        ship_address_name: Nom pour la livraison
-        ship_address_location: Adresse de livraison
+    invoice_filename: 'Facture-%{number}-%{date}.pdf'
+    invoice_column_names:
+      product_name: Nom du produit
+      quantity: Quantité
+      adjustment: Remise
+      price: Prix
+      unit_price: Prix unitaire
+    orders_export_column_names:
+      invoice: Facture
+      via: Via
+      number: Numéro de la commande
+      order_number: 'Numéro de la commande #%{number}'
+      items_name: Nom des produits
+      item_count: Nombre total de produits
+      item_total: Valeur total des produits
+      adjustment_total: Valeur totals des remises/taxes des produits
+      total: Valeur final des produits
+      promo_total: Prix total des promotions
+      shipping_method_name: Méthode de livraison
+      shipment_total: Prix total de la livraison
+      payment_total: Prix total de la commande
+      email: Email
+      bill_address_name: Nom pour la facturation
+      bill_address_location: Adresse de facturation
+      ship_address_name: Nom pour la livraison
+      ship_address_location: Adresse de livraison
     pages:
       conditions_generales_de_ventes: Conditions Générales de Ventes
       mentions_legales: Mentions légales
@@ -128,3 +139,13 @@ fr:
         added: Votre message à bien été enregistré
     shipment_states:
       canceled: Annulé
+    promotion_rule_types:
+      weight_total:
+        name: Poids total
+        description: Poids total de la commande
+    eligibility_errors:
+      messages:
+        weight_total_more_than: Cette promotion n'est pas applicable sur une commande supérieur à %{weight}kg
+        weight_total_less_than: Cette promotion n'est pas applicable sur une commande inférieur à %{weight}kg
+        weight_total_more_than_or_equal: Cette promotion n'est pas applicable sur une commande supérieur ou égale à %{weight}kg
+        weight_total_less_than_or_equal: Cette promotion n'est pas applicable sur une commande inférieur ou égale à %{weight}kg
