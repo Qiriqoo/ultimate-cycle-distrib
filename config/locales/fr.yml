@@ -87,8 +87,18 @@ fr:
       added: Email ajouté avec succés
       deleted: Email supprimé avec succés
       return_list_newsletters: Retour à la liste des abonnés
+    invoice_filename: 'Facture-%{number}-%{date}.pdf'
+    invoice_column_names:
+      product_name: Nom du produit
+      quantity: Quantité
+      adjustment: Remise
+      price: Prix
+      unit_price: Prix unitaire
     orders_export_column_names:
+      invoice: Facture
+      via: Via
       number: Numéro de la commande
+      order_number: 'Numéro de la commande #%{number}'
       items_name: Nom des produits
       item_count: Nombre total de produits
       item_total: Valeur total des produits
@@ -103,6 +113,8 @@ fr:
       bill_address_location: Adresse de facturation
       ship_address_name: Nom pour la livraison
       ship_address_location: Adresse de livraison
+    print_invoice:
+      payment_via: Paiement via
     pages:
       conditions_generales_de_ventes: Conditions Générales de Ventes
       mentions_legales: Mentions légales

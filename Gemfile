@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2'
+gem 'rails', '4.2.2'
 gem 'pg'
 gem 'unicorn'
 gem 'delayed_job_active_record'
@@ -10,6 +10,7 @@ gem 'rails_12factor', group: :production
 gem 'axlsx_rails'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk', '< 2.0'
+gem 'prawn-rails'
 
 #JS
 gem 'uglifier', '>= 1.3.0'

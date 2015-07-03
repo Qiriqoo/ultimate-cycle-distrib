@@ -21,7 +21,6 @@ module OrderExtension
       end
       names
     end
-
   end
 
   module InstanceMethods
