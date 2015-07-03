@@ -49,5 +49,3 @@ Spree::State.create!([
   { name: 'Mayotte', abbr: 'MYT', country_id: france.id },
   { name: 'La Réunion', abbr: 'REU', country_id: france.id }
 ])
-
-Spree::Gateway::BraintreeGateway.create(name: 'Carte de Credit', description: 'Paiement a travers Braintree', auto_capture: true)

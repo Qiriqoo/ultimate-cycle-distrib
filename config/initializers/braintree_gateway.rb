@@ -1,4 +1,4 @@
-gateway = Spree::Gateway::BraintreeGateway.first
+gateway = Spree::Gateway::BraintreeGateway.where(name: 'Carte de Credit', description: 'Paiement a travers Braintree', auto_capture: true).first_or_create
 
 gateway.preferences = {
   environment: ENV['BRAINTREE_ENVIRONMENT'] || Rails.application.secrets.braintree_environment,
