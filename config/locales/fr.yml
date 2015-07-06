@@ -53,6 +53,7 @@ fr:
     use_existing_cc: Utiliser la carte existante
     shipping_total: Total de la livraison
     pending: En attente
+    selected_quantity_not_available: Quantité insuffisante
     admin:
       tab:
         products: produits
