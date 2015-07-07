@@ -1,3 +1,21 @@
-#promotion_path_field, .action-translate {
+/******** ADMIN ******/
+
+/* Hide translations buttons */
+.action-translate {
+  display: none;
+}
+
+/* Hide refund buttons */
+.action-refund {
+  display: none;
+}
+
+/* Hide risk analysis  */
+#risk_analysis {
+  display: none;
+}
+
+/* Hide useless promotion on product creation */
+#promotion_path_field {
   display: none;
 }
