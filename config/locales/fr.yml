@@ -54,6 +54,7 @@ fr:
     shipping_total: Total de la livraison
     pending: En attente
     selected_quantity_not_available: Quantité insuffisante
+    save_my_address: Se souvenir de mon adresse
     admin:
       tab:
         products: produits
