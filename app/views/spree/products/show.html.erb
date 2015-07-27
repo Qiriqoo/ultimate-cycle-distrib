@@ -2,8 +2,9 @@
 
 <% cache [I18n.locale, current_currency, @product, Spree::Product.count] do %>
   <div data-hook="product_show" itemscope itemtype="http://schema.org/Product">
-    <div class="col-md-7 col-sm-12" data-hook="product_left_part">
+    <div class="col-md-12 col-sm-12" data-hook="product_left_part">
       <div data-hook="product_left_part_wrap">
+        <h1 class="product-title text-center" itemprop="name"><%= @product.name %></h1>
         <div id="product-images" data-hook="product_images">
           <div id="main-image" class="panel panel-default" data-hook>
             <div class="panel-body text-center">
@@ -15,34 +16,38 @@
           </div>
         </div>
 
-        <div data-hook="product_properties">
-          <%= render partial: 'properties' %>
-        </div>
 
         <div data-hook="promotions">
           <%= render partial: 'promotions' %>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="col-md-5 col-sm-12" data-hook="product_right_part">
-      <div data-hook="product_right_part_wrap">
-        <div id="product-description" data-hook="product_description">
-          <h1 class="product-title" itemprop="name"><%= @product.name %></h1>
-
-          <div class="well" itemprop="description" data-hook="description">
-            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
-          </div>
-          <% if spree_current_user %>
-            <div id="cart-form" data-hook="cart_form">
-              <%= render partial: 'cart_form' %>
-            </div>
-          <% end %>
+  <div class="col-md-12 col-sm-12" data-hook="product_right_part">
+    <h1 class="text-center title">Description</h1>
+    <div class="<%= !spree_current_user  ? "col-sm-12 col-md-12" : "col-sm-8 col-md-8" %>" data-hook="product_right_part_wrap">
+      <div id="product-description" data-hook="product_description">
+        <div class="well" itemprop="description" data-hook="description">
+          <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
         </div>
-        <% unless @cross_products.nil? %>
-          <%= render partial: 'taxons' %>
-        <% end %>
       </div>
     </div>
+    <div class="col-md-4 col-sm-4">
+      <% if spree_current_user %>
+        <div id="cart-form" data-hook="cart_form">
+          <%= render partial: 'cart_form' %>
+        </div>
+      <% end %>
+    </div>
   </div>
+    <div class="col-md-12 col-sm-12">
+      <h1 class="text-center title">Propriétés</h1>
+      <div id="product_properties"data-hook="product_properties">
+        <%= render partial: 'properties' %>
+      </div>
+    </div>
+  <% unless @cross_products.nil? %>
+    <%= render partial: 'taxons' %>
+  <% end %>
 <% end %>

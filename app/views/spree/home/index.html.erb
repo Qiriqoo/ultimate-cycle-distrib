@@ -1,0 +1,65 @@
+<div id="home-slide" class="home-cont col-md-12 col-sm-12">
+  <div class="carousel slide" data-ride="carousel" id="home_slider">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li class="active" data-slide-to="0" data-target="#home_slider"></li>
+      <li data-slide-to="1" data-target="#home_slider"></li>
+      <li data-slide-to="2" data-target="#home_slider"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= image_tag "Surly_Bike.jpg", class: "fat-bike" %>
+        <div class="carousel-caption">
+          <h1 class="main-text">Découvrez l'authentique Fat Bike !</h1>
+          <p><a class="btn btn-clear btn-sm btn-min-block" href="/t/velos/surly">En savoir plus</a></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <%= image_tag "bk-bike-small.png", class: "fat-bike" %>
+        <div class="carousel-caption">
+          <h1 class="main-text">Découvrez l'authentique Fat Bike !</h1>
+          <p><a class="btn btn-clear btn-sm btn-min-block" href="/t/velos/surly">En savoir plus</a></p>
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag "banjo-brothers.png" %>
+      </div>
+    </div>
+    <!-- Controls-->
+    <a class="left carousel-control" data-slide="prev" href="#home_slider">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+    </a>
+    <a class="right carousel-control" data-slide="next" href="#home_slider">
+      <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+  </div>
+</div>
+
+<div id="homepage_products" class="col-md-12 col-sm-12">
+  <h1 class="text-center home-product-title">Découvrez nos produits phares:</h1>
+  <div data-hook="homepage_products">
+    <% cache(cache_key_for_products) do %>
+      <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+    <% end %>
+  </div>
+</div>
+<div id="home-partenaire" class="col-md-12 col-sm-12">
+  <h1 class="text-center title">Ultimate Cycle Distibution partenaire de:</h1>
+  <h1 class="text-center partenaire">Marion Clignet pour la lutte contre l'epilepsie et de Solidream</h1>
+  <div class="col-md-6 col-sm-6">
+    <div class="m-clignet">
+      <%= image_tag "marion-clignet.png" %>
+    </div>
+  </div>
+  
+  <div class="col-md-6 col-sm-6">
+    <div class="solidream">
+      <%= image_tag "solidream-logo.jpg" %>
+    </div>
+    <div class="solidream-text">
+      <p>Si « Solidream » est bien la combinaison des mots « solidarité » et « rêve » dans la langue de Shakespeare, il traduit surtout un état d’esprit. C’est à travers des projets d’aventure que nous l’illustrons, grâce à la ténacité et l’abnégation propulsées par une solide amitié, mais il s’agit bien d’aller au-delà de la sueur et de la poussière. « L’aventure n’est qu’un prétexte pour nous éclairer sur les valeurs essentielles de la vie », est un des messages de notre premier film éponyme. En tant qu’auteurs-réalisateurs, nous avons à cœur de transmettre un message optimiste et humain.</p> 
+    </div>
+  </div>
+</div>

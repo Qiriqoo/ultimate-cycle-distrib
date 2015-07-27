@@ -1,14 +1,18 @@
-<div id="taxon-crumbs" data-hook class=" five ">
-  <h3 class="product-section-title"><%= Spree.t(:look_for_similar_items) %></h3>
-  <div data-hook="product_taxons">
-    <div id='cross-products' class='col-md-12 col-sm-12'>
+<div id='cross-products' class='col-md-12 col-sm-12'>
+  <div id="taxon-crumbs" data-hook class=" five ">
+    <h2 class="product-section-title text-center"><%= Spree.t(:look_for_similar_items) %></h2>
+    <div data-hook="product_taxons" class="container-fluid">
       <% @cross_products.each do |product| %>
-        <div class='col-md-4 col-sm-12 cross-product'>
-          <%= link_to product_path(product) do %>
-            <%= product_image(product, itemprop: "image") %>
-            <br>
-            <span><%= product.name %></span>
-          <% end %>
+        <div class='col-md-4 col-sm-12'>
+          <div class="panel panel-default">
+            <div class="panel-body text-center cross-product">
+              <%= link_to product_path(product) do %>
+                <%= large_image(product, itemprop: "image") %>
+                <br>
+                <span><%= product.name %></span>
+              <% end %>
+            </div>
+          </div>
         </div>
       <% end %>
     </div>
