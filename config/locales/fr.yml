@@ -49,6 +49,12 @@ fr:
     filter: Filtre
     shop_by_taxonomy: '%{taxonomy}'
     shipment_details: Details de livraison
+    use_new_cc_or_payment_method: Utiliser une nouvelle carte
+    use_existing_cc: Utiliser la carte existante
+    shipping_total: Total de la livraison
+    pending: En attente
+    selected_quantity_not_available: Quantité insuffisante
+    save_my_address: Se souvenir de mon adresse
     admin:
       tab:
         products: produits
@@ -83,23 +89,34 @@ fr:
       added: Email ajouté avec succés
       deleted: Email supprimé avec succés
       return_list_newsletters: Retour à la liste des abonnés
-    orders:
-      export_column_names:
-        number: Numéro de la commande
-        items_name: Nom des produits
-        item_count: Nombre total de produits
-        item_total: Valeur total des produits
-        adjustment_total: Valeur totals des remises/taxes des produits
-        total: Valeur final des produits
-        promo_total: Prix total des promotions
-        shipping_method_name: Méthode de livraison
-        shipment_total: Prix total de la livraison
-        payment_total: Prix total de la commande
-        email: Email
-        bill_address_name: Nom pour la facturation
-        bill_address_location: Adresse de facturation
-        ship_address_name: Nom pour la livraison
-        ship_address_location: Adresse de livraison
+    invoice_filename: 'Facture-%{number}-%{date}.pdf'
+    invoice_column_names:
+      product_name: Nom du produit
+      quantity: Quantité
+      adjustment: Remise
+      price: Prix
+      unit_price: Prix unitaire
+    orders_export_column_names:
+      invoice: Facture
+      via: Via
+      number: Numéro de la commande
+      order_number: 'Numéro de la commande #%{number}'
+      items_name: Nom des produits
+      item_count: Nombre total de produits
+      item_total: Valeur total des produits
+      adjustment_total: Valeur totals des remises/taxes des produits
+      total: Valeur final des produits
+      promo_total: Prix total des promotions
+      shipping_method_name: Méthode de livraison
+      shipment_total: Prix total de la livraison
+      payment_total: Prix total de la commande
+      email: Email
+      bill_address_name: Nom pour la facturation
+      bill_address_location: Adresse de facturation
+      ship_address_name: Nom pour la livraison
+      ship_address_location: Adresse de livraison
+    print_invoice:
+      payment_via: Paiement via
     pages:
       conditions_generales_de_ventes: Conditions Générales de Ventes
       mentions_legales: Mentions légales
