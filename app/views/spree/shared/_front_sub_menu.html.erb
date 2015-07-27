@@ -1,0 +1,5 @@
+<ul class= "list-group dropdown-menu child_descendents" role="menu">
+  <% taxons.each do |taxon| %>
+    <li><%= link_to taxon.name, seo_url(taxon), class: "list-group-item" %></li>
+  <% end %> 
+</ul>
