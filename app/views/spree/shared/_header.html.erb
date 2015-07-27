@@ -1,5 +1,5 @@
 <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
-<div id="spree-header">
+<div id="spree-header" class="">
   <header id="header" data-hook>
       <div class="row">
         <div class="col-md-5">
@@ -15,12 +15,7 @@
         </div>
       </div>
   </header>
-  <div id='main-search-bar' class="col-md-12">
-    <div class="col-md-6 navbar-nav">
-      <%= breadcrumbs(@taxon) %>      
-    </div>
-    <div class = "col-md-6 pull-right">
-      <%= render :partial => 'spree/shared/search' %>
-    </div>
+  <div id='main-search-bar' class="container text-center">
+    <%= render :partial => 'spree/shared/search' %>
   </div>
 </div>
