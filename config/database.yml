@@ -23,4 +23,4 @@ production:
   host: localhost
   pool: 5
   username: ideesbebe
-  password: sefsef
+  password: sefsef  
