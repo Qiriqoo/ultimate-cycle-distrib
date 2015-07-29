@@ -7,11 +7,11 @@
 <% end %>
 
 
-<h2><%= Spree.t('pages.partners') %></h2>
+<h2><%= Spree.t('pages.partner.surly') %></h2>
 <br>
 <br>
 
-<% if @partners.partner.empty? %>
+<% if @partners.surly.empty? %>
   <div class="text-center no-objects-found">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/partner')) %>,
     <%= link_to Spree.t(:add_one), new_admin_partner_path(status: 0) %>!
@@ -24,7 +24,7 @@
       <col style="width: 15%">
     </colgroup>
     <tbody>
-      <% @partners.partner.each do |partner|%>
+      <% @partners.surly.each do |partner|%>
         <tr id="<%= spree_dom_id partner %>" data-hook="admin_partners_index_rows" class="<%= cycle('odd', 'even')%>">
           <td class='partner_logo align-center'><%= image_tag partner.logo.url(:medium) %></td>
           <td class='partner_name'>
@@ -40,10 +40,10 @@
   </table>
 <% end %>
 
-<h2><%= Spree.t('pages.providers') %></h2>
+<h2><%= Spree.t('pages.partner.allcity') %></h2>
 <br>
 <br>
-<% if @partners.provider.empty? %>
+<% if @partners.allcity.empty? %>
   <div class="text-center">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/partner')) %>,
     <%= link_to Spree.t(:add_one), new_admin_partner_path(status: 1) %>!
@@ -56,7 +56,7 @@
       <col style="width: 15%">
     </colgroup>
     <tbody>
-      <% @partners.provider.each do |provider|%>
+      <% @partners.allcity.each do |provider|%>
         <tr id="<%= spree_dom_id provider %>" data-hook="admin_providers_index_rows" class="<%= cycle('odd', 'even')%>">
           <td class='provider_logo align-center'><%= image_tag provider.logo.url(:medium) %></td>
           <td class='provider_name'>
@@ -71,5 +71,134 @@
     </tbody>
   </table>
 <% end %>
+
+<h2><%= Spree.t('pages.partner.nrth') %></h2>
+<br>
+<br>
+<% if @partners.nrth.empty? %>
+  <div class="text-center">
+    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/partner')) %>,
+    <%= link_to Spree.t(:add_one), new_admin_partner_path(status: 2) %>!
+  </div>
+<% else %>
+  <table class="table" id="listing_providers" data-hook>
+    <colgroup>
+      <col style="width: 30%">
+      <col style="width: 55%">
+      <col style="width: 15%">
+    </colgroup>
+    <tbody>
+      <% @partners.nrth.each do |provider|%>
+        <tr id="<%= spree_dom_id provider %>" data-hook="admin_providers_index_rows" class="<%= cycle('odd', 'even')%>">
+          <td class='provider_logo align-center'><%= image_tag provider.logo.url(:medium) %></td>
+          <td class='provider_name'>
+            <%= link_to provider.name, edit_admin_partner_path(provider.id) %>
+          </td>
+          <td class='actions actions-2 text-right'>
+            <%= link_to_edit provider, :no_text => true %>
+            <%= link_to_delete provider, :no_text => true %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<h2><%= Spree.t('pages.partner.whisky') %></h2>
+<br>
+<br>
+<% if @partners.whisky.empty? %>
+  <div class="text-center">
+    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/partner')) %>,
+    <%= link_to Spree.t(:add_one), new_admin_partner_path(status: 3) %>!
+  </div>
+<% else %>
+  <table class="table" id="listing_providers" data-hook>
+    <colgroup>
+      <col style="width: 30%">
+      <col style="width: 55%">
+      <col style="width: 15%">
+    </colgroup>
+    <tbody>
+      <% @partners.whisky.each do |provider|%>
+        <tr id="<%= spree_dom_id provider %>" data-hook="admin_providers_index_rows" class="<%= cycle('odd', 'even')%>">
+          <td class='provider_logo align-center'><%= image_tag provider.logo.url(:medium) %></td>
+          <td class='provider_name'>
+            <%= link_to provider.name, edit_admin_partner_path(provider.id) %>
+          </td>
+          <td class='actions actions-2 text-right'>
+            <%= link_to_edit provider, :no_text => true %>
+            <%= link_to_delete provider, :no_text => true %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<h2><%= Spree.t('pages.partner.issi') %></h2>
+<br>
+<br>
+<% if @partners.issi.empty? %>
+  <div class="text-center">
+    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/partner')) %>,
+    <%= link_to Spree.t(:add_one), new_admin_partner_path(status: 4) %>!
+  </div>
+<% else %>
+  <table class="table" id="listing_providers" data-hook>
+    <colgroup>
+      <col style="width: 30%">
+      <col style="width: 55%">
+      <col style="width: 15%">
+    </colgroup>
+    <tbody>
+      <% @partners.issi.each do |provider|%>
+        <tr id="<%= spree_dom_id provider %>" data-hook="admin_providers_index_rows" class="<%= cycle('odd', 'even')%>">
+          <td class='provider_logo align-center'><%= image_tag provider.logo.url(:medium) %></td>
+          <td class='provider_name'>
+            <%= link_to provider.name, edit_admin_partner_path(provider.id) %>
+          </td>
+          <td class='actions actions-2 text-right'>
+            <%= link_to_edit provider, :no_text => true %>
+            <%= link_to_delete provider, :no_text => true %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<h2><%= Spree.t('pages.partner.problem') %></h2>
+<br>
+<br>
+<% if @partners.problem.empty? %>
+  <div class="text-center">
+    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/partner')) %>,
+    <%= link_to Spree.t(:add_one), new_admin_partner_path(status: 5) %>!
+  </div>
+<% else %>
+  <table class="table" id="listing_providers" data-hook>
+    <colgroup>
+      <col style="width: 30%">
+      <col style="width: 55%">
+      <col style="width: 15%">
+    </colgroup>
+    <tbody>
+      <% @partners.problem.each do |provider|%>
+        <tr id="<%= spree_dom_id provider %>" data-hook="admin_providers_index_rows" class="<%= cycle('odd', 'even')%>">
+          <td class='provider_logo align-center'><%= image_tag provider.logo.url(:medium) %></td>
+          <td class='provider_name'>
+            <%= link_to provider.name, edit_admin_partner_path(provider.id) %>
+          </td>
+          <td class='actions actions-2 text-right'>
+            <%= link_to_edit provider, :no_text => true %>
+            <%= link_to_delete provider, :no_text => true %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
 
 

@@ -122,18 +122,22 @@ fr:
       mentions_legales: Mentions légales
       contacts: Contacts
       updated: Page mise à jour avec succés
-      partners_providers: Partenaires / Fournisseurs
+      partners_providers: Photos
       partners: Partenaires
       providers: Fournisseurs
       partner:
-        provider: Fournisseur
-        partner: Partenaire
-        add_partner: Ajouter un partenaire / fournisseur
-        edit_partner: Modifier un partenaire / fournisseur
-        return_list_all_partners: Retour à la liste des partenaires / fournisseurs
-        added: Le partneaire / fournisseur à bien été enregistré
-        edited: Le partneaire / fournisseur à bien été modifié
-        deleted: Le partneaire / fournisseur à bien été supprimé
+        allcity: All-city
+        surly: Surly
+        nrth: 45Nrth
+        whisky: Whisky Parts
+        issi: ISSI Pedals
+        problem: Problem Solvers
+        add_partner: Ajouter une photo
+        edit_partner: Modifier une photo
+        return_list_all_partners: Retour à la liste des Photos
+        added: La photo à bien été enregistré
+        edited: La photo à bien été modifié
+        deleted: La photo à bien été supprimé
       contact:
         subject_placeholder: Le sujet de votre message
         email_placeholder: Votre email

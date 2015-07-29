@@ -1,6 +1,6 @@
 class Spree::Partner < ActiveRecord::Base
 
-  enum status: [:partner, :provider]
+  enum status: [:surly, :allcity, :nrth, :whisky, :issi, :problem ]
 
   has_attached_file :logo, styles: { thumb: '75x75>', medium: '150x150>' }
 
