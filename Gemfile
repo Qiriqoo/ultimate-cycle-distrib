@@ -21,6 +21,7 @@ gem 'jbuilder', '~> 2.0'
 #CSS
 gem 'sass-rails', '~> 4.0.3'
 gem 'haml-rails', '~> 0.8'
+gem 'bootstrap-sass', '3.3.1'
 
 #SPREE
 gem 'spree', github: 'spree/spree', branch: '3-0-stable'
