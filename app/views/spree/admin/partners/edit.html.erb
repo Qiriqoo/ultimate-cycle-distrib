@@ -24,10 +24,18 @@
 
   <div class="form-group">
     <%= f.label :status, Spree.t(:status) %><br />
-    <%= f.radio_button(:status, :partner) %>
-    <%= label_tag(:age_partner, Spree.t('pages.partner.partner')) %>
-    <%= f.radio_button(:status, :provider) %>
-    <%= label_tag(:age_adult, Spree.t('pages.partner.provider')) %>
+    <%= f.radio_button(:status, :surly) %>
+    <%= label_tag(:age_partner, Spree.t('pages.partner.surly')) %>
+    <%= f.radio_button(:status, :allcity) %>
+    <%= label_tag(:age_adult, Spree.t('pages.partner.allcity')) %>
+    <%= f.radio_button(:status, :nrth) %>
+    <%= label_tag(:age_adult, Spree.t('pages.partner.nrth')) %>
+    <%= f.radio_button(:status, :whisky) %>
+    <%= label_tag(:age_adult, Spree.t('pages.partner.whisky')) %>
+    <%= f.radio_button(:status, :issi) %>
+    <%= label_tag(:age_adult, Spree.t('pages.partner.issi')) %>
+    <%= f.radio_button(:status, :problem) %>
+    <%= label_tag(:age_adult, Spree.t('pages.partner.problem')) %>    
   </div>
 
   <div class="form-group">
