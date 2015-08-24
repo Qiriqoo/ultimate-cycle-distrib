@@ -373,6 +373,9 @@ body {
   .panel-body {
     padding: 0 !important;
   }
+  .click-to-zoom {
+    height: 15px !important;
+  }
   img {
     height: 490px !important;
   }
@@ -444,4 +447,41 @@ body {
 }
 .taxon-title {
 
+}
+
+//pages
+#pages {
+  background-color: #FFF !important;
+  min-height: 669px !important;
+}
+
+//photos
+
+.animate-block {
+  position: absolute;
+  top: 281px;
+  left: 0;
+  -webkit-transition: top .8s ease-in-out;
+  -moz-transition: top .8s ease-in-out;
+}
+.photo_name {
+  display: none;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0 !important;
+  color: white;
+  background-color: rgba(35,20,35,.9) !important;
+  -webkit-transition: opacity .30s ease-in-out !important;
+  -moz-transition: opacity .30s ease-in-out !important;
+}
+.photo_img {
+  .panel-body {
+      padding: 0 !important;
+  }
+  img {
+    height: 281px !important;
+    overflow: hidden !important;
+    z-index: 0 !important;
+  }
 }

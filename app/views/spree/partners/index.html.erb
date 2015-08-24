@@ -1,150 +1,118 @@
-<h2 style='text-align: center'><%= Spree.t('pages.partner.surly') %></h2>
-<br>
-<table>
-  <colgroup>
-    <col style="width: 30%">
-    <col style="width: 70%">
-  </colgroup>
-  <tbody>
-    <% @partners.surly.each do |partner|%>
-      <tr style='border-bottom: none'>
-        <td style='text-align: center'>
-          <%= image_tag partner.logo.url(:medium) %>
-        </td>
-        <td class='partner_name'>
-          <h4><%= partner.name %></h4>
+<div class="col-md-12 col-sm-12" id="surly_photos">
+  <h2 style='text-align: center'><%= Spree.t('pages.partner.surly') %></h2>
+  <hr>
+  <% @partners.surly.each do |photo|%>
+    <div class="col-md-3 col-sm-4">
+      <div class="photo_img panel panel-default">
+        <div class="panel-body text-center">
+          <%= link_to image_tag(photo.logo.url(:medium)), photo.logo.url(Spree::ProductZoom::Config.default_image_style), :class => 'fancybox img-responsive', :rel => 'surly_photos' %>
+        </div>
+      </div>
+      <div class='photo_name'>
+        <div class="animate-block">
+          <h4><%= photo.name %></h4>
           <br>
-          <%= partner.description %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<hr>
-<br>
-<h2 style='text-align: center'><%= Spree.t('pages.partner.allcity') %></h2>
-<br>
-<table>
-  <colgroup>
-    <col style="width: 30%">
-    <col style="width: 70%">
-  </colgroup>
-  <tbody>
-    <% @partners.allcity.each do |provider|%>
-      <tr style='border-bottom: none'>
-        <td style='text-align: center'>
-          <%= image_tag provider.logo.url(:medium) %>
-        </td>
-        <td class='provider_name'>
-          <h4><%= provider.name %></h4>
+          <%= photo.description %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="col-md-12 col-sm-12" id="allcity_photos">
+  <h2 style='text-align: center'><%= Spree.t('pages.partner.allcity') %></h2>
+  <hr>
+  <% @partners.allcity.each do |photo|%>
+    <div class="col-md-3 col-sm-4">
+      <div class="photo_img panel panel-default">
+        <div class="panel-body text-center">
+          <%= link_to image_tag(photo.logo.url(:medium)), photo.logo.url(Spree::ProductZoom::Config.default_image_style), :class => 'fancybox img-responsive', :rel => 'allcity_phot
+          os' %>
+        </div>
+      </div>
+      <div class='photo_name'>
+        <h4><%= photo.name %></h4>
+        <br>
+        <%= photo.description %>
+        </div>
+      </div>
+  <% end %>
+</div>
+<div class="col-md-12 col-sm-12" id="whisky_photos">
+  <h2 style='text-align: center'><%= Spree.t('pages.partner.nrth') %></h2>
+  <hr>
+  <% @partners.nrth.each do |photo|%>
+    <div class="col-md-3 col-sm-4">
+      <div class="photo_img panel panel-default">
+        <div class="panel-body text-center">
+          <%= link_to image_tag(photo.logo.url(:medium)), photo.logo.url(Spree::ProductZoom::Config.default_image_style), :class => 'fancybox img-responsive', :rel => 'nrth_photos' %>
+        </div>
+      </div>
+      <div class='photo_name'>
+        <h4><%= photo.name %></h4>
+        <br>
+        <%= photo.description %>
+        </div>
+      </div>
+  <% end %>
+</div>
+<div class="col-md-12 col-sm-12" id="whisky_photos">
+  <h2 style='text-align: center'><%= Spree.t('pages.partner.whisky') %></h2>
+  <hr>
+  <% @partners.whisky.each do |photo|%>
+    <div class="col-md-3 col-sm-4">
+      <div class="photo_img panel panel-default">
+        <div class="panel-body text-center">
+          <%= link_to image_tag(photo.logo.url(:medium)), photo.logo.url(Spree::ProductZoom::Config.default_image_style), :class => 'fancybox img-responsive', :rel => 'whisky_photos' %>
+        </div>
+      </div>
+      <div class='photo_name'>
+        <div class="animate-block">
+          <h4><%= photo.name %></h4>
           <br>
-          <%= provider.description %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<hr>
-<br>
-<h2 style='text-align: center'><%= Spree.t('pages.partner.nrth') %></h2>
-<br>
-<table>
-  <colgroup>
-    <col style="width: 30%">
-    <col style="width: 70%">
-  </colgroup>
-  <tbody>
-    <% @partners.nrth.each do |partner|%>
-      <tr style='border-bottom: none'>
-        <td style='text-align: center'>
-          <%= image_tag partner.logo.url(:medium) %>
-        </td>
-        <td class='partner_name'>
-          <h4><%= partner.name %></h4>
+          <%= photo.description %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>
+<div class="col-md-12 col-sm-12" id="issi_photos">
+  <h2 style='text-align: center'><%= Spree.t('pages.partner.issi') %></h2>
+  <hr>
+  <% @partners.issi.each do |photo|%>
+    <div class="col-md-3 col-sm-4">
+      <div class="photo_img panel panel-default">
+        <div class="panel-body text-center">
+          <%= link_to image_tag(photo.logo.url(:medium)), photo.logo.url(Spree::ProductZoom::Config.default_image_style), :class => 'fancybox img-responsive', :rel => 'issi_photos' %>
+        </div>
+      </div>
+      <div class='photo_name'>
+        <div class="animate-block">
+          <h4><%= photo.name %></h4>
           <br>
-          <%= partner.description %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<hr>
-<br>
-<h2 style='text-align: center'><%= Spree.t('pages.partner.whisky') %></h2>
-<br>
-<table>
-  <colgroup>
-    <col style="width: 30%">
-    <col style="width: 70%">
-  </colgroup>
-  <tbody>
-    <% @partners.whisky.each do |partner|%>
-      <tr style='border-bottom: none'>
-        <td style='text-align: center'>
-          <%= image_tag partner.logo.url(:medium) %>
-        </td>
-        <td class='partner_name'>
-          <h4><%= partner.name %></h4>
+          <%= photo.description %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>
+<div class="col-md-12 col-sm-12" id="problem_photos">
+  <h2 style='text-align: center'><%= Spree.t('pages.partner.problem') %></h2>
+  <hr>
+  <% @partners.problem.each do |photo|%>
+    <div class="col-md-3 col-sm-4">
+      <div class="photo_img panel panel-default">
+        <div class="panel-body text-center">
+          <%= link_to image_tag(photo.logo.url(:medium)), photo.logo.url(Spree::ProductZoom::Config.default_image_style), :class => 'fancybox img-responsive', :rel => 'problem_photos' %>
+        </div>
+      </div>
+      <div class='photo_name'>
+        <div class="animate-block">
+          <h4><%= photo.name %></h4>
           <br>
-          <%= partner.description %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<hr>
-<br>
-<h2 style='text-align: center'><%= Spree.t('pages.partner.issi') %></h2>
-<br>
-<table>
-  <colgroup>
-    <col style="width: 30%">
-    <col style="width: 70%">
-  </colgroup>
-  <tbody>
-    <% @partners.issi.each do |partner|%>
-      <tr style='border-bottom: none'>
-        <td style='text-align: center'>
-          <%= image_tag partner.logo.url(:medium) %>
-        </td>
-        <td class='partner_name'>
-          <h4><%= partner.name %></h4>
-          <br>
-          <%= partner.description %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<hr>
-<br>
-<h2 style='text-align: center'><%= Spree.t('pages.partner.problem') %></h2>
-<br>
-<table>
-  <colgroup>
-    <col style="width: 30%">
-    <col style="width: 70%">
-  </colgroup>
-  <tbody>
-    <% @partners.problem.each do |partner|%>
-      <tr style='border-bottom: none'>
-        <td style='text-align: center'>
-          <%= image_tag partner.logo.url(:medium) %>
-        </td>
-        <td class='partner_name'>
-          <h4><%= partner.name %></h4>
-          <br>
-          <%= partner.description %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<hr>
-<br>
+          <%= photo.description %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>
+

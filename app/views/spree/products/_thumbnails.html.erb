@@ -3,7 +3,7 @@
   <ul id="product-thumbnails" class="thumbnails list-inline" data-hook>
     <% @product.images.each do |i| %>
       <li class='tmb-all tmb-<%= i.viewable.id %>'>
-        <%= link_to(image_tag(i.attachment.url(:product), class: "thumbnail"), i.attachment.url(:large)) %>
+        <%= link_to(image_tag(i.attachment.url(:product-thumbnails)), i.attachment.url(:large),:data => { :original => i.attachment.url(:original) }) %>
       </li>
     <% end %>
 
