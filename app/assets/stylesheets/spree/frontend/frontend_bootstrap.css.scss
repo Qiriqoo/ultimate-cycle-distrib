@@ -476,12 +476,12 @@ body {
   -moz-transition: opacity .30s ease-in-out !important;
 }
 .photo_img {
+  height: 281px !important;
+  overflow: hidden !important;
   .panel-body {
       padding: 0 !important;
   }
   img {
     height: 281px !important;
-    overflow: hidden !important;
-    z-index: 0 !important;
   }
 }
